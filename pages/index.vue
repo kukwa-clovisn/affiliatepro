@@ -63,7 +63,7 @@
       </div>
     </div>
     <MainCourses />
-    <div class="video-content">
+    <!-- <div class="video-content">
       <div class="video-wrapper">
         <iframe
           width="560"
@@ -75,7 +75,8 @@
           allowfullscreen
         ></iframe>
       </div>
-    </div>
+    </div> -->
+    <mainEvents />
     <mainTestimonials />
     <div class="subscriber-container">
       <div class="subscriber-wrapper">

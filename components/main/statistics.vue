@@ -2,13 +2,13 @@
   <div class="statistics">
     <div class="wrapper">
       <div class="content" data-aos="slide-up">
-        <p data-aos="zoom-in">100 + <span>students</span></p>
+        <p data-aos="zoom-in">1000 + <span>students</span></p>
       </div>
       <div class="content" data-aos="slide-up">
-        <p data-aos="zoom-in">50+ <span>courses</span></p>
+        <p data-aos="zoom-in">150+ <span>courses</span></p>
       </div>
       <div class="content" data-aos="slide-up">
-        <p data-aos="zoom-in">100 + <span>videos</span></p>
+        <p data-aos="zoom-in">510 + <span>videos</span></p>
       </div>
     </div>
   </div>

@@ -25,20 +25,35 @@
         welcome to my<br />
         <span>forex trading academy</span>
       </h1>
-      <div class="logo"><img src="../assets/jugosfx.png" alt="" /></div>
       <p>
         Here, you are going to be learn all there is to know about forex trading
         from the very basics to being a well rooted forex trader. stay tuned and
         try not to skip a course.
       </p>
     </div>
+    <div class="why-us">
+      <h1>why us</h1>
+
+      <div class="why-us-wrapper">
+        <div>
+          <span>1000+</span>
+          <p>trained forex traders</p>
+        </div>
+        <div>
+          <span>510+</span>
+          <p>Well detailed video courses</p>
+        </div>
+        <div>
+          <span>6+</span>
+          <p>years of experience as a profitable trader and engineer</p>
+        </div>
+      </div>
+    </div>
     <div class="course-expo">
       <div class="course-expo-wrapper">
         <div class="left-content">
           <div class="image">
-            <div class="image-wrapper">
-              <img src="../assets/learn-b.jpg" alt="" />
-            </div>
+            <img src="../assets/learn-b.jpg" alt="" />
           </div>
         </div>
         <div class="right-content">
@@ -82,9 +97,7 @@
         </div>
         <div class="right-content-2">
           <div class="image">
-            <div class="image-wrapper">
-              <img src="../assets/group.jpeg" alt="" />
-            </div>
+            <img src="../assets/group.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -200,9 +213,10 @@
   .statistics {
     width: 100%;
     height: fit-content;
-    background: white;
+    // background: white;
 
     padding: 50px 10px;
+    margin: 0;
 
     h1 {
       text-transform: uppercase;
@@ -224,7 +238,7 @@
       height: fit-content;
 
       img {
-        width: 200px;
+        width: 150px;
         height: auto;
         object-fit: contain;
       }
@@ -236,44 +250,115 @@
       line-break: 1.4em;
     }
   }
+
+  .why-us {
+    width: 100%;
+    height: fit-content;
+    background: inherit;
+    position: relative;
+    margin: 0;
+
+    h1 {
+      padding: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 25px;
+      position: relative;
+      width: fit-content;
+      margin: auto;
+      color: rgb(37, 97, 89);
+
+      &::before,
+      &::after {
+        content: "";
+        width: 45%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+
+        background: rgb(253, 147, 1);
+      }
+      &::before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+        background: rgb(37, 97, 89);
+      }
+    }
+
+    .why-us-wrapper {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      div {
+        width: 30%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+          color: rgb(253, 147, 1);
+          font-weight: 800;
+          font-size: 28px;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
   .course-expo {
     width: 100%;
     height: fit-content;
     padding: 0;
+    margin: 0 auto;
+
     .course-expo-wrapper {
       width: 100%;
-      height: fit-content;
+      height: 420px;
       padding: 0;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: flex-start;
 
       .left-content,
       .right-content-2 {
-        width: 40%;
-        height: fit-content;
+        width: 50%;
+        height: 100%;
+        padding: 0;
 
         .image {
           width: 100%;
           height: 100%;
+          margin: 0;
 
           img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            margin: 0;
           }
         }
       }
       .right-content,
       .left-content-2 {
-        width: 60%;
-        height: fit-content;
+        width: 50%;
+        height: 100%;
         padding: 0;
-
         .header-background {
           background: rgb(4, 71, 48);
           width: 100%;
-          height: 70px;
+          height: 90px;
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -311,6 +396,7 @@
 
           li {
             margin-bottom: 10px;
+            text-align: left;
           }
         }
       }

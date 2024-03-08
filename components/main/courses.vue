@@ -211,6 +211,7 @@
               width: 100%;
               padding: 10px;
               text-transform: capitalize;
+              text-align: left;
             }
 
             a {
@@ -256,6 +257,7 @@
           width: 80%;
           margin: 0 auto;
           font-size: 12px;
+          text-align: left;
         }
 
         @media screen and (max-width: 768px) {
