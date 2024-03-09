@@ -13,8 +13,8 @@
         </div>
         <div class="event">
           <div class="image"><img src="../../assets/gospel3.png" alt="" /></div>
-          <p class="header">crystal palace hotel</p>
-          <span> Bali Douala </span>
+          <p class="header">Hilton hotel</p>
+          <span> yaounde </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
@@ -24,8 +24,8 @@
         </div>
         <div class="event">
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
-          <p class="header">crystal palace hotel</p>
-          <span> Bali Douala </span>
+          <p class="header">Hilton Hotel</p>
+          <span> Yaounde </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
@@ -37,8 +37,8 @@
           <div class="image">
             <img src="../../assets/gosp12.png" alt="" />
           </div>
-          <p class="header">crystal palace hotel</p>
-          <span> Bali Douala </span>
+          <p class="header">Charriote Hotel</p>
+          <span> Buea </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
@@ -92,6 +92,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      flex-wrap: wrap;
       gap: 20px;
 
       a {
@@ -161,6 +162,19 @@
           height: 40px;
           border: 2px solid rgb(24, 157, 124);
           margin: 0 auto;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        .content {
+          width: 100%;
+        }
+        .event {
+          width: 300px;
+
+          @media screen and (max-width: 400px) {
+            width: 95vw;
+          }
         }
       }
     }

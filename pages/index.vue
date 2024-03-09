@@ -1,6 +1,7 @@
 <template>
   <div class="home-container">
     <div class="landing-page">
+      <div class="blur-wrapper"></div>
       <div class="landing-page-wrapper">
         <div class="image-content">
           <div class="img">
@@ -77,8 +78,23 @@
       </div>
     </div> -->
     <mainEvents />
-    <mainTestimonials />
-    <div class="subscriber-container">
+    <div class="book">
+      <div class="wrapper">
+        <p>Have you heard of.....</p>
+        <h1>the missing piece??</h1>
+        <p>
+          This is a book every forex trader and someone who aspires to be a
+          forex trader should read. it is a must read. There is a lot of wisdom
+          bundled with experiement at your disporsal for free. reach out today
+          and grab your free copy before the offers ends.
+        </p>
+        <div class="image"><img src="../assets/book.jpg" alt="" /></div>
+
+        <a href="https://selar.co/9994hu">grab a free copy now</a>
+      </div>
+    </div>
+    <!-- <mainTestimonials /> -->
+    <div class="subscriber-container" id="newsletter">
       <div class="subscriber-wrapper">
         <h1 data-aos="fade-up">
           want to get special offers, promos and course updates from us???
@@ -120,6 +136,10 @@ hr {
     height: fit-content;
     background: rgb(234, 246, 236);
 
+    .blur-wrapper {
+      display: none;
+    }
+
     .landing-page-wrapper {
       width: 80%;
       height: 89vh;
@@ -129,6 +149,7 @@ hr {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .image-content {
         width: 50%;
         height: fit-content;
@@ -163,8 +184,22 @@ hr {
 
           span {
             color: rgb(255, 82, 22);
-            font-size: 40px;
+
             text-transform: uppercase;
+          }
+
+          @media screen and (max-width: 600px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 30px;
+
+            span {
+              display: block;
+              font-size: 30px;
+            }
           }
         }
 
@@ -179,6 +214,10 @@ hr {
           h2 {
             text-transform: uppercase;
             color: rgb(37, 97, 89);
+
+            @media screen and (max-width: 400px) {
+              font-size: 19px;
+            }
           }
 
           .list-div {
@@ -221,6 +260,10 @@ hr {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+
+                @media screen and (max-width: 400px) {
+                  font-size: 18px;
+                }
               }
             }
             &::before {
@@ -237,6 +280,10 @@ hr {
 
               z-index: 1;
             }
+
+            @media screen and (max-width: 250px) {
+              width: 100%;
+            }
           }
 
           @keyframes list {
@@ -246,6 +293,11 @@ hr {
             to {
               left: 100%;
             }
+          }
+
+          @media screen and (max-width: 400px) {
+            gap: 10px;
+            justify-content: space-evenly;
           }
         }
 
@@ -357,6 +409,66 @@ hr {
           }
         }
       }
+
+      @media screen and (max-width: 1100px) {
+        justify-content: center;
+        width: 90%;
+        .image-content {
+          display: none;
+        }
+
+        .page-content {
+          width: 100%;
+
+          h1,
+          p {
+            text-align: center;
+            color: white;
+          }
+
+          h1 {
+            font-size: 60px;
+            padding: 20px auto;
+            margin-bottom: 50px;
+
+            span {
+              color: rgb(253, 147, 1);
+            }
+
+            @media screen and (max-width: 900px) {
+              font-size: 45px;
+            }
+          }
+
+          p {
+            font-size: 26px;
+          }
+
+          .listings,
+          .page-buttons {
+            justify-content: center;
+          }
+
+          .listings {
+            width: fit-content;
+            padding: 3px 20px;
+            margin: 10px auto;
+            background: rgb(234, 246, 236);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      background: url(./assets/gospel.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: contain;
+      background-position: center center;
+
+      .blur-wrapper {
+        display: block;
+      }
     }
   }
 
@@ -366,14 +478,6 @@ hr {
     display: flex;
     align-items: flex-end;
     padding: 30px 0;
-
-    background: linear-gradient(
-      to bottom,
-      rgb(37, 97, 89),
-      rgb(50, 168, 152),
-      rgba(50, 168, 152, 0)
-    );
-    // border-radius: 0 0 10% 10%;
 
     .about-wrapper {
       width: 80%;
@@ -390,7 +494,7 @@ hr {
       align-items: flex-start;
       border-radius: 15px;
       position: relative;
-      box-shadow: -3px -3px 8px 1px rgba(1, 49, 34, 0.807);
+      box-shadow: -3px -3px 8px 1px rgba(1, 49, 34, 0.53);
 
       .image-content {
         width: 35%;
@@ -536,26 +640,6 @@ hr {
     }
   }
 
-  .video-content {
-    width: 100%;
-    height: fit-content;
-    padding: 20px;
-
-    .video-wrapper {
-      width: 100%;
-      height: fit-content;
-      margin: 10px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      iframe {
-        width: 100%;
-        height: 500px;
-        margin: 0;
-      }
-    }
-  }
   .subscriber-container {
     width: 100%;
     height: fit-content;
@@ -624,6 +708,63 @@ hr {
             font-size: 13px;
           }
         }
+      }
+    }
+  }
+
+  .book {
+    width: 100%;
+    height: fit-content;
+
+    .wrapper {
+      width: 100%;
+      height: fit-content;
+
+      p {
+        text-align: center;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+        font-size: 19px;
+      }
+
+      h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .image {
+        width: 100%;
+        height: fit-content;
+
+        img {
+          height: 500px;
+          width: auto;
+          object-fit: cover;
+          margin: 20px auto;
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+        margin: 10px auto;
+        background: linear-gradient(
+          to right,
+          rgb(253, 147, 1),
+          rgb(255, 82, 22)
+        );
       }
     }
   }

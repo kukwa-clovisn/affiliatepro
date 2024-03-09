@@ -12,13 +12,27 @@
         </p>
       </div>
       <div class="links">
+        <h4>useful links</h4>
         <div class="wrapper">
-          <div class="link"><a href="/#about-container">about us</a></div>
-          <div class="link"><a href="/#courses-container">courses</a></div>
-          <div class="link"><a href="/#contact-container">contacts</a></div>
+          <div class="link"><nuxt-link to="/">home</nuxt-link></div>
+          <div class="link"><a href="/#about-us">about us</a></div>
+          <div class="link"><a href="/#courses">courses</a></div>
+          <div class="link"><a href="/#contacts">contacts</a></div>
         </div>
       </div>
-      <div class="contacts">contacts</div>
+      <div class="links">
+        <h4>categories</h4>
+        <div class="wrapper">
+          <div class="link"><nuxt-link to="/signup">signup</nuxt-link></div>
+          <div class="link"><nuxt-link to="/signin">signin</nuxt-link></div>
+
+          <div class="link">
+            <nuxt-link to="/appointment">appointment</nuxt-link>
+          </div>
+          <div class="link"><a href="/#newsletter">newsletter</a></div>
+        </div>
+      </div>
+      <!-- <div class="contacts">contacts</div> -->
     </div>
     <div class="copyright">&copy; copyright codingherald2023</div>
   </footer>
@@ -32,36 +46,48 @@ footer {
   background: rgb(37, 97, 89);
 
   .wrapper {
-    width: 90%;
+    width: 95%;
     height: fit-content;
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     align-items: flex-start;
 
     .logo {
-      width: 40%;
+      width: 35%;
 
       h1 {
         color: white;
         text-transform: uppercase;
         text-align: left;
+        font-size: 28px;
         span {
           color: orange;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 22px;
         }
       }
       p {
         color: rgb(232, 231, 231);
-        font-size: 13px;
-        line-height: 17px;
+        font-size: 14px;
+        line-height: 26px;
         text-align: left;
       }
     }
 
     .links {
-      width: 20%;
+      width: 30%;
       height: fit-content;
+
+      h4 {
+        color: white;
+        text-transform: uppercase;
+      }
 
       .wrapper {
         width: 100%;
@@ -70,26 +96,48 @@ footer {
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 20px 0;
 
         .link {
+          width: 100%;
           a {
             text-decoration: none;
-            color: white;
+            color: rgb(227, 227, 227);
             text-transform: capitalize;
             padding: 5px 3px;
 
+            display: block;
+            padding-left: 0;
+            width: 100%;
+
             &:hover {
               text-decoration: underline;
+              color: orange;
+            }
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          flex-direction: row;
+
+          .link {
+            width: fit-content;
+
+            a {
+              width: fit-content;
             }
           }
         }
       }
     }
-    .contacts {
-      width: 40%;
-      height: fit-content;
-      color: white;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      .logo,
+      .links {
+        width: 100%;
+      }
     }
   }
   .copyright {

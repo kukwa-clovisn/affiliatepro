@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-container" id="contact-container">
+  <div class="contact-container" id="contact">
     <div class="wrapper">
       <div class="image-content">
         <img src="~/assets/gospel.png" alt="" />
@@ -11,7 +11,7 @@
         magni adipisci architecto aperiam dolorum.
       </p>
       <p>Get to me on whatsapp</p>
-      <a href="#" class="whatsapp">start whatsapp chat</a>
+      <a href="https://wa.link/s5b5y7" class="whatsapp">start whatsapp chat</a>
 
       <div class="links">
         <div class="link">

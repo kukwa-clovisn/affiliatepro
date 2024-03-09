@@ -9,7 +9,7 @@
           <nuxtLink to="/">Home</nuxtLink>
           <a href="/#about-us">about us</a>
           <a href="/#courses">Courses</a>
-          <nuxtLink to="/#contact-container">Contacts</nuxtLink>
+          <nuxtLink to="/#contact">Contacts</nuxtLink>
         </div>
       </div>
       <div class="header-contact">
@@ -18,14 +18,15 @@
         </button>
       </div>
       <div class="menu-div">
-        <button @click="toggleMenu = !toggleMenu">
-          <i class="fa-solid fa-bars">ba</i>
+        <button @click="($event) => (menuState = true)">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </div>
 </template>
 <script setup>
+const menuState = useMenuState();
 const stickyHeader = ref(false);
 if (process.client) {
   window.addEventListener("scroll", () => {
@@ -60,7 +61,7 @@ const toggleMenu = useMenuState();
     box-shadow: 0 0 6px 1px rgb(205, 205, 205);
 
     .header-logo {
-      width: 25%;
+      width: 23%;
       height: 100%;
 
       .header-logo-wrapper {
@@ -148,7 +149,7 @@ const toggleMenu = useMenuState();
     }
 
     .header-contact {
-      width: 15%;
+      width: 17%;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -159,12 +160,13 @@ const toggleMenu = useMenuState();
         background: rgb(255, 255, 255);
         background: rgb(37, 97, 89);
         width: max-content;
-        padding: 0 25px;
+
         height: 40px;
         border: none;
         border-radius: 30px;
 
         a {
+          padding: 0 20px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -213,6 +215,9 @@ const toggleMenu = useMenuState();
       }
     }
 
+    @media screen and (max-width: 1200px) {
+      width: 90%;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
       border-radius: 0;

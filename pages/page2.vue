@@ -10,11 +10,11 @@
         </p>
         <div class="page-buttons">
           <button>
-            <nuxt-link to="/page3"
+            <nuxt-link to="/signup"
               ><i class="fa-regular fa-circle-right"></i>join
               mentorship</nuxt-link
             ></button
-          ><button>
+          ><button @click="($event) => navigateTo('/signin')">
             <i class="fa-regular fa-circle-play"></i>free courses
           </button>
         </div>
@@ -49,7 +49,9 @@
         </div>
       </div>
     </div>
-    <div class="course-expo">
+
+    <div class="comings"><h3>courses coming soon. Stay tune....</h3></div>
+    <!-- <div class="course-expo">
       <div class="course-expo-wrapper">
         <div class="left-content">
           <div class="image">
@@ -101,7 +103,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -154,6 +156,10 @@
           padding: 0;
           font-weight: 400;
           line-height: 0.9;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 34px;
         }
       }
       p {
@@ -295,6 +301,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       gap: 30px;
 
       div {
