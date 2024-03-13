@@ -2,17 +2,17 @@
   <div class="events-container" id="events">
     <div class="blur-wrapper"></div>
     <div class="wrapper">
+      <div class="content">
+        <h1>our events...</h1>
+        <p>
+          Enjoy our endless and outstanding tour across the nation and across
+          different fields.
+        </p>
+        <nuxt-link to="/page2">about academy</nuxt-link>
+      </div>
       <div class="flex-div">
-        <div class="content">
-          <h1>our events...</h1>
-          <p>
-            Enjoy our endless and outstanding tour across the nation and across
-            different fields.
-          </p>
-          <nuxt-link to="/page2">about academy</nuxt-link>
-        </div>
         <div class="event">
-          <div class="image"><img src="../../assets/gospel3.png" alt="" /></div>
+          <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
           <p class="header">Hilton hotel</p>
           <span> yaounde </span>
           <p>
@@ -23,9 +23,23 @@
           <nuxt-link to="/page2">check event</nuxt-link>
         </div>
         <div class="event">
-          <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
-          <p class="header">Hilton Hotel</p>
-          <span> Yaounde </span>
+          <div class="image"><img src="../../assets/gosp1.png" alt="" /></div>
+          <p class="header">Best Western Hotel</p>
+          <span> Douala </span>
+          <p>
+            this event was a tour with exness cameroon to educate the masses
+            about forex trading and the green pasture that lies therein the
+            forex industry.
+          </p>
+          <nuxt-link to="/page2">check event</nuxt-link>
+        </div>
+
+        <div class="event">
+          <div class="image">
+            <img src="../../assets/gosp12.png" alt="" />
+          </div>
+          <p class="header">Charriote Hotel</p>
+          <span> Buea </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
@@ -38,7 +52,18 @@
             <img src="../../assets/gosp12.png" alt="" />
           </div>
           <p class="header">Charriote Hotel</p>
-          <span> Buea </span>
+          <span> Bafoussam </span>
+          <p>
+            this event was a tour with exness cameroon to educate the masses
+            about forex trading and the green pasture that lies therein the
+            forex industry.
+          </p>
+          <nuxt-link to="/page2">check event</nuxt-link>
+        </div>
+        <div class="event">
+          <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
+          <p class="header">Hilton Hotel</p>
+          <span> Bamenda </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
@@ -55,7 +80,7 @@
 .events-container {
   width: 100%;
   height: fit-content;
-  background: url(../../assets/group.jpeg);
+  background: url(../../assets/gospel3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
@@ -74,26 +99,47 @@
     position: relative;
     padding: 40px auto;
 
-    h1 {
-      padding: 20px;
-      padding-left: 0;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: white;
-      font-size: 30px;
-      text-align: left;
-    }
+    .content {
+      width: 90%;
+      height: fit-content;
+      margin: 10px auto;
+      h1 {
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        font-size: 40px;
+      }
 
+      p {
+        color: white;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid goldenrod;
+        padding: 10px 20px;
+        color: white;
+        text-transform: uppercase;
+        width: fit-content;
+        margin: 10px auto;
+      }
+    }
     .flex-div {
       width: 90%;
+      height: 450px;
       margin: 20px auto;
-      height: fit-content;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      align-items: center;
+      flex-wrap: nowrap;
       gap: 20px;
+      overflow: hidden;
+      overflow-x: scroll;
 
       a {
         text-decoration: none;
@@ -106,21 +152,12 @@
         text-transform: uppercase;
       }
 
-      .content {
-        width: 23%;
-        height: fit-content;
-
-        p {
-          color: white;
-          text-align: left;
-        }
-      }
-
       .event {
-        width: 20%;
-        height: fit-content;
+        width: 300px;
+        height: 380px;
         padding-bottom: 20px;
         background: rgb(255, 255, 255);
+        display: block;
 
         .image {
           width: 100%;
@@ -160,8 +197,23 @@
           font-weight: 600;
           width: 80%;
           height: 40px;
-          border: 2px solid rgb(24, 157, 124);
+          border: 1px solid rgb(24, 157, 124);
           margin: 0 auto;
+
+          &:hover {
+            background: linear-gradient(
+              to right,
+              rgb(253, 147, 1),
+              rgb(255, 82, 22)
+            );
+            color: white;
+            border: none;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 3px 18px 1px rgb(64, 64, 64);
+          border: 1px solid white;
         }
       }
 

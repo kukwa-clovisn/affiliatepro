@@ -7,11 +7,8 @@
       <div class="signin-img-right">
         <img src="~/assets/login_icon.png" alt="" />
       </div>
-      <h1>Book an appointment with me</h1>
-      <p>
-        Get the opportunity to meet with one in person or get a one of one
-        online session with me.
-      </p>
+      <h1>sign in</h1>
+      <p>signin and get access to free courses</p>
       <div class="signin-form">
         <div class="form-wrapper">
           <div class="input">
@@ -51,7 +48,7 @@
 <script setup>
 import axios from "axios";
 import { useRouter } from "vue-router";
-
+const loading = useLoaderState();
 const router = useRouter();
 const user = reactive({
   email: "",
@@ -60,10 +57,23 @@ const user = reactive({
 
 function signinFunc() {
   axios
-    .post("/login", user)
+    .post("http://api.gospelfxtrader.com/api/signin", user)
     .then((res) => {
       console.log(res);
       if (res.statusText === "OK" || res.status === 200 || res.status === 201) {
+        loading.value = false;
+        ElMessageBox.alert(
+          "Congratulations. Your signin is successfull. you can head over to the signin page to make ues of our free courses ",
+          "login successful",
+          {
+            // if you want to disable its autofocus
+            // autofocus: false,
+            confirmButtonText: "Homepage",
+            callback: () => {
+              router.push("/page2");
+            },
+          }
+        );
         localStorage.setItem("accessId", res.data.accessId);
 
         localStorage.setItem("userId", res.data.username);
@@ -75,11 +85,24 @@ function signinFunc() {
 
         router.push("/");
       } else {
+        loading.value = false;
         console.log(res);
       }
     })
     .catch((err) => {
       console.log(err);
+      ElMessageBox.alert(
+        "Your login request has not been submitted . Try Again ",
+        "Access Denied",
+        {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "OK",
+          callback: () => {
+            router.push("/signin");
+          },
+        }
+      );
     });
 }
 </script>

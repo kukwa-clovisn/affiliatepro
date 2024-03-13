@@ -155,7 +155,7 @@
     }
 
     .course-list {
-      width: 100%;
+      width: 95%;
       height: fit-content;
       display: flex;
       justify-content: center;
@@ -165,7 +165,7 @@
       margin: 20px auto;
 
       .course {
-        width: 230px;
+        width: 300px;
         height: 360px;
         box-shadow: 0 3px 17px 2px rgb(228, 228, 228);
         background: white;
@@ -242,8 +242,9 @@
           padding: 0 20px;
           margin-bottom: 0;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 550;
           line-height: 1.4em;
+          color: rgb(228, 79, 30);
         }
         p {
           text-align: left;

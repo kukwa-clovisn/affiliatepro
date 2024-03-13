@@ -15,12 +15,30 @@
       <div class="signin-form">
         <div class="form-wrapper">
           <div class="input">
+            <label for="username">username:</label
+            ><input
+              id="username"
+              type="text"
+              v-model="appointmentBody.name"
+              placeholder="Enter username..."
+            />
+          </div>
+          <div class="input">
             <label for="email">Email address:</label
             ><input
               id="email"
               type="email"
-              v-model="user.email"
+              v-model="appointmentBody.email"
               placeholder="Enter Email address..."
+            />
+          </div>
+          <div class="input">
+            <label for="tel">tel address:</label
+            ><input
+              id="tel"
+              type="tel"
+              v-model="appointmentBody.tel"
+              placeholder="Enter phone number(preferrably whatsapp)"
             />
           </div>
           <div class="input">
@@ -31,11 +49,21 @@
               cols="30"
               rows="10"
               placeholder=" Reason for appointment"
+              v-model="appointmentBody.message"
             ></textarea>
           </div>
 
-          <button @click="signinFunc(user.email, user.password)">
-            book appointment
+          <button
+            @click="
+              appointmentFunc(
+                appointmentBody.name,
+                appointmentBody.email,
+                appointmentBody.tel,
+                appointmentBody.message
+              )
+            "
+          >
+            Book Appointment
           </button>
         </div>
       </div>
@@ -48,35 +76,61 @@ import axios from "axios";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const user = reactive({
+const loader = useLoaderState();
+const appointmentBody = reactive({
+  name: "",
   email: "",
-  password: "",
+  tel: "",
+  message: "",
 });
 
-function signinFunc() {
+const appointmentFunc = (e) => {
+  loader.value = true;
+
   axios
-    .post("/login", user)
+    .post("https://api.gospelfxtrader.com/api/appointment", appointmentBody)
     .then((res) => {
-      console.log(res);
-      if (res.statusText === "OK" || res.status === 200 || res.status === 201) {
-        localStorage.setItem("accessId", res.data.accessId);
-
-        localStorage.setItem("userId", res.data.username);
-
-        localStorage.setItem("accessToken", res.data.accessToken);
-        axios.defaults.headers.common[
-          "Authorization"
-        ] = `Bearer ${localStorage.getItem("accessToken")}`;
-
-        router.push("/");
-      } else {
-        console.log(res);
-      }
+      loader.value = false;
+      setTimeout(() => {
+        ElMessageBox.alert(
+          "Your appointment request has been submitted successfully.We'll communicate an appointment day/date to your through your email or number. ",
+          "Appointment Submitted",
+          {
+            // if you want to disable its autofocus
+            // autofocus: false,
+            confirmButtonText: "Homepage",
+            callback: () => {
+              router.push("/");
+              appointmentBody.name = "";
+              appointmentBody.email = "";
+              appointmentBody.tel = "";
+              appointmentBody.date = "";
+              appointmentBody.time = "";
+            },
+          }
+        );
+      }, 1000);
     })
     .catch((err) => {
-      console.log(err);
+      loader.value = false;
+      setTimeout(() => {
+        ElMessageBox.alert(
+          "Your appointment request has not been submitted . Try Again ",
+          "Appointment Failed",
+          {
+            // if you want to disable its autofocus
+            // autofocus: false,
+            confirmButtonText: "OK",
+            callback: () => {
+              router.push("/appointment");
+            },
+          }
+        );
+      }, 1000);
+
+      return err;
     });
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -175,6 +229,7 @@ function signinFunc() {
             text-transform: capitalize;
             padding: 5px 0;
             display: block;
+            text-align: left;
             font-weight: 500;
             color: rgb(37, 97, 89);
           }

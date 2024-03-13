@@ -6,10 +6,7 @@
       </div>
       <p>want to link up with me? check out our social media links below...</p>
       <hr />
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero facere
-        magni adipisci architecto aperiam dolorum.
-      </p>
+   
       <p>Get to me on whatsapp</p>
       <a href="https://wa.link/s5b5y7" class="whatsapp">start whatsapp chat</a>
 

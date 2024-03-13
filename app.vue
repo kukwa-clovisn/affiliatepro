@@ -1,5 +1,9 @@
 <template>
-  <main>
+  <main
+    v-loading="loading"
+    :element-loading-svg="svg"
+    element-loading-svg-view-box="-10, -10, 50, 50"
+  >
     <div class="main-component">
       <NuxtLayout name="page-header" />
       <div class="page-content">
@@ -68,21 +72,17 @@
             <NuxtLink to="/#newsletter" @click="($event) => (menuState = false)"
               >newsletter <i class="fa-solid fa-arrow-right"></i
             ></NuxtLink>
-            <NuxtLink
-              to="/appointment-part"
-              @click="($event) => (menuState = false)"
+            <NuxtLink to="/appointment" @click="($event) => (menuState = false)"
               >appointment<i class="fa-solid fa-arrow-right"></i
             ></NuxtLink>
           </div>
           <hr />
           <h2>join mentorship</h2>
           <div class="service-wrapper">
-            <NuxtLink to="/about-us" @click="($event) => (menuState = false)"
+            <NuxtLink to="/signup" @click="($event) => (menuState = false)"
               >signup <i class="fa-solid fa-arrow-right"></i
             ></NuxtLink>
-            <NuxtLink
-              to="/contact-page"
-              @click="($event) => (menuState = false)"
+            <NuxtLink to="/signin" @click="($event) => (menuState = false)"
               >signin<i class="fa-solid fa-arrow-right"></i
             ></NuxtLink>
           </div>
@@ -113,13 +113,14 @@
 
 <script setup>
 useHead({
-  title: "AffiliatePro ",
+  title: "Gospelfxtrader ",
   viewport: "width:device-width, initial-scale=1",
   charset: "utf-8",
   meta: [
     {
       name: "description",
-      content: "affiliate marketting courses",
+      content:
+        "I'm a mentor and CEO of jugosfx academy I mentor and follow up my mentees till there are profitable Benefits Offering a 1 on 1 mentorship to help slow learners pick up I trained from novis to pro traders helping traders with most of their trading challenges psychologically and technically",
     },
   ],
   link: [
@@ -149,10 +150,18 @@ useHead({
 });
 
 const menuState = useMenuState();
+const loading = useLoaderState();
 
-// console.log("page height", docHeight);
-// const percentageScrolled = (window.scrollY / docHeight) * 100;
-// console.log("percentageScrolled");
+const svg = `
+        <path class="path" d="
+          M 30 15
+          L 28 17
+          M 25.61 25.61
+          A 15 15, 0, 0, 1, 15 30
+          A 15 15, 0, 1, 1, 27.99 7.5
+          L 15 15
+        " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>
+      `;
 </script>
 
 <style lang="scss" >

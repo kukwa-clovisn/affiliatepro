@@ -71,33 +71,68 @@
 <script setup>
 import axios from "axios";
 
-const user = reactive({ username: "", email: "", password: "" });
+import { useRouter } from "vue-router";
+const router = useRouter();
 
+const user = reactive({ username: "", email: "", password: "" });
+const loading = useLoaderState();
 const status = reactive({
   username: false,
   email: false,
   password: false,
 });
 
-function signupFunc() {
+const signupFunc = (e) => {
+  loading.value = true;
   if (
     user.username.length >= 3 &&
     user.email.length >= 8 &&
     user.password.length >= 4
   ) {
     axios
-      .post("/signup", user)
+      .post("https://api.gospelfxtrader.com/api/signup", user)
       .then((res) => {
-        console.log(res);
+        loading.value = false;
+
+        ElMessageBox.alert(
+          "Congratulations. Your signup is successfullyou can head over to the signin page to make ues of our free courses ",
+          "signup successful",
+          {
+            // if you want to disable its autofocus
+            // autofocus: false,
+            confirmButtonText: "Homepage",
+            callback: () => {
+              router.push("/");
+            },
+          }
+        );
       })
       .catch((err) => {
-        console.log(err);
-        alert(err.response.data.msg);
+        loading.value = false;
+        ElMessageBox.alert(
+          "Your signup request has not been submitted . Try Again ",
+          "signup Failed",
+          {
+            // if you want to disable its autofocus
+            // autofocus: false,
+            confirmButtonText: "OK",
+            callback: () => {
+              router.push("/signup");
+            },
+          }
+        );
       });
   } else {
-    alert("invalid credentials");
+    ElMessageBox.alert("Invalid Credentials ", "signup Failed", {
+      // if you want to disable its autofocus
+      // autofocus: false,
+      confirmButtonText: "OK",
+      callback: () => {
+        router.push("/signup");
+      },
+    });
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -80,17 +80,19 @@
     <mainEvents />
     <div class="book">
       <div class="wrapper">
-        <p>Have you heard of.....</p>
-        <h1>the missing piece??</h1>
-        <p>
-          This is a book every forex trader and someone who aspires to be a
-          forex trader should read. it is a must read. There is a lot of wisdom
-          bundled with experiement at your disporsal for free. reach out today
-          and grab your free copy before the offers ends.
-        </p>
-        <div class="image"><img src="../assets/book.jpg" alt="" /></div>
+        <div class="book-description">
+          <p>Have you heard of.....</p>
+          <h1>the missing piece??</h1>
+          <p>
+            This is a book every forex trader and someone who aspires to be a
+            forex trader should read. it is a must read. There is a lot of
+            wisdom bundled with experiement at your disporsal for free. reach
+            out today and grab your free copy before the offers ends.
+          </p>
+          <a href="https://selar.co/9994hu">grab a free copy now</a>
+        </div>
 
-        <a href="https://selar.co/9994hu">grab a free copy now</a>
+        <div class="image"><img src="../assets/book.jpg" alt="" /></div>
       </div>
     </div>
     <!-- <mainTestimonials /> -->
@@ -506,9 +508,7 @@ hr {
           width: auto;
           height: 440px;
           cursor: pointer;
-          // position: absolute;
-          // top: -14%;
-          // left: 10%;
+
           object-fit: contain;
         }
       }
@@ -566,6 +566,7 @@ hr {
           width: 150px;
           height: 47px;
           border: none;
+          display: block;
           border-radius: 10px;
           background: linear-gradient(
             to right,
@@ -575,11 +576,7 @@ hr {
           color: white;
           text-transform: capitalize;
           font-weight: 600;
-          margin: 20px 0;
-
-          i {
-            padding-right: 6px;
-          }
+          margin: 0px;
         }
       }
       @media screen and (max-width: 1000px) {
@@ -719,52 +716,67 @@ hr {
     .wrapper {
       width: 100%;
       height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
 
-      p {
-        text-align: center;
-        padding: 10px;
-        width: 80%;
-        margin: auto;
-        font-size: 19px;
-      }
-
-      h1 {
-        font-size: 50px;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .image {
-        width: 100%;
+      .book-description {
+        width: 50%;
         height: fit-content;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+          height: fit-content;
+          padding: 10px 20px;
+          color: white;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 20px;
+          background: linear-gradient(
+            to right,
+            rgb(253, 147, 1),
+            rgb(255, 82, 22)
+          );
+          border-radius: 3px;
+        }
+        p {
+          text-align: center;
+          padding: 10px;
+          width: 100%;
 
-        img {
-          height: 500px;
-          width: auto;
-          object-fit: cover;
-          margin: 20px auto;
+          font-size: 19px;
+          text-align: left;
+        }
+
+        h1 {
+          font-size: 50px;
+          text-transform: uppercase;
+          font-weight: 700;
+          text-align: center;
+          width: 100%;
+          text-align: left;
+
+          padding-left: 0;
+          color: rgb(255, 82, 22);
+          position: relative;
         }
       }
 
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
+      .image {
+        width: 35%;
         height: fit-content;
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        font-size: 20px;
-        margin: 10px auto;
-        background: linear-gradient(
-          to right,
-          rgb(253, 147, 1),
-          rgb(255, 82, 22)
-        );
+
+        img {
+          height: 400px;
+          width: auto;
+
+          object-fit: cover;
+          margin: 20px auto;
+          margin-left: 0;
+        }
       }
     }
   }

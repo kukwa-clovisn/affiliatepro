@@ -15,7 +15,7 @@
         <h4>useful links</h4>
         <div class="wrapper">
           <div class="link"><nuxt-link to="/">home</nuxt-link></div>
-          <div class="link"><a href="/#about-us">about us</a></div>
+          <div class="link"><a href="/#about">about us</a></div>
           <div class="link"><a href="/#courses">courses</a></div>
           <div class="link"><a href="/#contacts">contacts</a></div>
         </div>

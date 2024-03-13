@@ -7,22 +7,30 @@
       </h2>
 
       <div class="designs">
-        <div
-          class="design"
-          data-aos="fade-up"
-          v-for="(item, index) in [
-            'virtual learning',
-            'easy exercises',
-            'interactive sessions',
-          ]"
-          :key="index"
-        >
+        <div class="design" data-aos="fade-up">
           <div class="icon"><i class="fa-solid fa-laptop"></i></div>
-          <h3>{{ item }}</h3>
+          <h3>virtual learning</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            deserunt hic deleniti recusandae iure vitae quaerat labore optio,
-            suscipit esse.
+            Distance is never a hinderance when it comes to learning. We make
+            use of zoom, google meet and virtual platforms that can help you
+            grow.
+          </p>
+        </div>
+        <div class="design" data-aos="fade-up">
+          <div class="icon"><i class="fa-solid fa-laptop"></i></div>
+          <h3>interactive sessions</h3>
+          <p>
+            Learning is never fun without interaction. We offer one-on-one
+            mentorship help sessions and see into helping our trainees get the
+            best out of every course.
+          </p>
+        </div>
+        <div class="design" data-aos="fade-up">
+          <div class="icon"><i class="fa-solid fa-laptop"></i></div>
+          <h3>practical exercises</h3>
+          <p>
+            what is learning withoug exercises? we bring and train you with real
+            life scenarious and conditions which makes learning much more fun.
           </p>
         </div>
       </div>

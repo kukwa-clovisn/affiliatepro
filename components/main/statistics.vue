@@ -5,7 +5,7 @@
         <p data-aos="zoom-in">1000 + <span>students</span></p>
       </div>
       <div class="content" data-aos="slide-up">
-        <p data-aos="zoom-in">150+ <span>courses</span></p>
+        <p data-aos="zoom-in">10+ <span>courses</span></p>
       </div>
       <div class="content" data-aos="slide-up">
         <p data-aos="zoom-in">510 + <span>videos</span></p>
