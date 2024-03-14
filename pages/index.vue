@@ -9,14 +9,17 @@
           </div>
         </div>
         <div class="page-content">
-          <h1>Hi i'm <span>Gospel Yong. </span><br /></h1>
+          <h1>Hi i'm <span>Gospel Yong. </span></h1>
+          <div class="sm-image-content">
+            <img src="~/assets/gospel.png" alt="" />
+          </div>
           <div class="listings">
-            <h2>i'm a</h2>
+            <!-- <h2>i'm a</h2>   -->
             <div class="list-div">
               <ul>
-                <li>forex trader.....</li>
-                <li>civil engineer.....</li>
-                <li>youtuber..........</li>
+                <li>forex trader.</li>
+                <li>civil engineer.</li>
+                <li>youtuber.</li>
               </ul>
             </div>
           </div>
@@ -64,19 +67,7 @@
       </div>
     </div>
     <MainCourses />
-    <!-- <div class="video-content">
-      <div class="video-wrapper">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/PsFhqfKrFu4?si=MtvDKx9X1jjJ1Rov"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div> -->
+
     <mainEvents />
     <div class="book">
       <div class="wrapper">
@@ -137,6 +128,7 @@ hr {
     width: 100%;
     height: fit-content;
     background: rgb(234, 246, 236);
+    position: relative;
 
     .blur-wrapper {
       display: none;
@@ -205,41 +197,54 @@ hr {
           }
         }
 
-        .listings {
+        .sm-image-content {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          border: 4px solid rgb(150, 195, 176);
+          overflow: hidden;
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
           align-items: center;
-          flex-direction: column;
-          flex-direction: row;
-          gap: 20px;
+          margin: 20px auto;
+          display: none;
 
-          h2 {
-            text-transform: uppercase;
-            color: rgb(37, 97, 89);
-
-            @media screen and (max-width: 400px) {
-              font-size: 19px;
-            }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
+        }
 
+        .listings {
+          position: relative;
+          width: 80%;
+          height: 105px;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           .list-div {
             position: relative;
-            height: 50px;
-            width: 230px;
+            height: 100px;
+            width: 98%;
             overflow: hidden;
             padding: 0;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+            padding: 14px;
 
             ul {
               width: 100%;
               list-style-type: none;
+              background: rgb(234, 246, 236);
+              z-index: 1;
+              animation: skip 9s steps(3) infinite;
               position: absolute;
-              animation: skip 12s steps(3) infinite;
               top: 0;
               left: 0;
-              margin: 0;
+              margin: auto;
               display: flex;
               justify-content: center;
               align-items: flex-start;
@@ -249,52 +254,64 @@ hr {
               li {
                 text-transform: uppercase;
                 font-size: 23px;
-                height: 50px;
+                height: 100px;
                 width: 100%;
                 display: flex;
-                text-align: left;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 padding: 0;
                 margin: 0;
                 color: rgb(37, 97, 89);
                 font-weight: 800;
-                overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                animation: explode 1.5s linear infinite alternate forwards;
 
                 @media screen and (max-width: 400px) {
                   font-size: 18px;
                 }
               }
-            }
-            &::before {
-              content: " ";
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              background: rgb(234, 246, 236);
-              animation: list 2s infinite alternate linear forwards;
 
-              border-left: 4px solid darkgreen;
-
-              z-index: 1;
+              @keyframes explode {
+                from {
+                  opacity: 1;
+                  transform: scale(0);
+                }
+                to {
+                  opacity: 1;
+                  transform: scale(2);
+                }
+              }
             }
 
             @media screen and (max-width: 250px) {
               width: 100%;
             }
           }
-
-          @keyframes list {
-            from {
-              left: 0;
-            }
-            to {
-              left: 100%;
-            }
+          &::before {
+            content: "";
+            width: 200%;
+            height: 90%;
+            position: absolute;
+            top: 20%;
+            left: -50%;
+            background: linear-gradient(rgb(14, 109, 74), rgb(14, 145, 112));
+            animation: rotate 2s linear infinite;
+          }
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(
+              to right,
+              rgb(253, 147, 1),
+              rgb(255, 82, 22)
+            );
+            transform: rotateZ(35deg);
+            animation: reverserotate 2s linear infinite;
           }
 
           @media screen and (max-width: 400px) {
@@ -303,12 +320,28 @@ hr {
           }
         }
 
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(-360deg);
+          }
+        }
+        @keyframes reverserotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
         @keyframes skip {
           from {
             top: 0;
           }
           to {
-            top: -150px;
+            top: -300px;
           }
         }
         p {
@@ -422,16 +455,21 @@ hr {
         .page-content {
           width: 100%;
 
+          .sm-image-content {
+            display: flex;
+          }
+
           h1,
           p {
             text-align: center;
             color: white;
+            line-height: normal;
           }
 
           h1 {
             font-size: 60px;
-            padding: 20px auto;
-            margin-bottom: 50px;
+            justify-content: space-evenly;
+            height: fit-content;
 
             span {
               color: rgb(253, 147, 1);
@@ -452,10 +490,31 @@ hr {
           }
 
           .listings {
-            width: fit-content;
-            padding: 3px 20px;
             margin: 10px auto;
-            background: rgb(234, 246, 236);
+            width: 90%;
+            background: rgb(37, 97, 89);
+
+            .list-div {
+              ul {
+                background: rgb(37, 97, 89);
+                li {
+                  color: rgb(241, 149, 28);
+                  font-size: 18px;
+                }
+              }
+            }
+
+            &::before {
+              background: rgb(215, 250, 236);
+            }
+          }
+
+          .page-buttons {
+            button {
+              &:last-child {
+                border: 1px solid white;
+              }
+            }
           }
         }
       }
@@ -467,9 +526,14 @@ hr {
       background-attachment: fixed;
       background-size: contain;
       background-position: center center;
+      background: rgb(37, 97, 89);
 
       .blur-wrapper {
-        display: block;
+        display: none;
+      }
+      .landing-page-wrapper {
+        height: fit-content;
+        padding-bottom: 4vh;
       }
     }
   }
@@ -712,6 +776,7 @@ hr {
   .book {
     width: 100%;
     height: fit-content;
+    margin: 20px auto;
 
     .wrapper {
       width: 100%;
@@ -776,6 +841,27 @@ hr {
           object-fit: cover;
           margin: 20px auto;
           margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        .book-description,
+        .image {
+          width: 90%;
+          @media screen and (max-width: 400px) {
+            width: 100%;
+          }
+        }
+
+        .book-description {
+          h1,
+          p,
+          a {
+            text-align: center;
+            margin: auto;
+          }
         }
       }
     }

@@ -10,8 +10,8 @@
         </p>
         <nuxt-link to="/page2">about academy</nuxt-link>
       </div>
-      <div class="flex-div">
-        <div class="event">
+      <el-carousel :interval="3000" type="card" height="450px">
+        <el-carousel-item>
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
           <p class="header">Hilton hotel</p>
           <span> yaounde </span>
@@ -20,9 +20,9 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/page2">check event</nuxt-link>
-        </div>
-        <div class="event">
+          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+        </el-carousel-item>
+        <el-carousel-item>
           <div class="image"><img src="../../assets/gosp1.png" alt="" /></div>
           <p class="header">Best Western Hotel</p>
           <span> Douala </span>
@@ -31,10 +31,10 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/page2">check event</nuxt-link>
-        </div>
+          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+        </el-carousel-item>
 
-        <div class="event">
+        <el-carousel-item>
           <div class="image">
             <img src="../../assets/gosp12.png" alt="" />
           </div>
@@ -45,9 +45,9 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/page2">check event</nuxt-link>
-        </div>
-        <div class="event">
+          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+        </el-carousel-item>
+        <el-carousel-item>
           <div class="image">
             <img src="../../assets/gosp12.png" alt="" />
           </div>
@@ -59,8 +59,8 @@
             forex industry.
           </p>
           <nuxt-link to="/page2">check event</nuxt-link>
-        </div>
-        <div class="event">
+        </el-carousel-item>
+        <el-carousel-item>
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
           <p class="header">Hilton Hotel</p>
           <span> Bamenda </span>
@@ -70,8 +70,8 @@
             forex industry.
           </p>
           <nuxt-link to="/page2">check event</nuxt-link>
-        </div>
-      </div>
+        </el-carousel-item>
+      </el-carousel>
     </div>
   </div>
 </template>
@@ -86,23 +86,23 @@
   background-attachment: scroll;
   position: relative;
   padding: 30px 0;
+
   .blur-wrapper {
     background: rgb(15, 80, 71);
     opacity: 0.8;
     width: 100%;
     height: 100%;
   }
-
   .wrapper {
-    width: 100%;
+    width: 90%;
     height: fit-content;
     position: relative;
-    padding: 40px auto;
+    margin: 40px auto;
 
     .content {
       width: 90%;
       height: fit-content;
-      margin: 10px auto;
+      margin: 20px auto;
       h1 {
         padding: 20px;
         text-align: center;
@@ -129,107 +129,99 @@
         margin: 10px auto;
       }
     }
-    .flex-div {
-      width: 90%;
-      height: 450px;
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 20px;
-      overflow: hidden;
-      overflow-x: scroll;
+    .el-carousel__item {
+      width: 300px;
+      height: 420px;
+      margin: auto;
+      padding-bottom: 20px;
+      background: rgb(255, 255, 255);
+
+      .image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      p {
+        color: rgb(15, 80, 71);
+        font-size: 12px;
+        text-align: left;
+        padding: 0 10px;
+        line-height: 1.3em;
+      }
+      p.header {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      span {
+        display: block;
+        font-size: 14px;
+        text-align: left;
+
+        color: goldenrod;
+        padding: 0 10px;
+      }
 
       a {
-        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid goldenrod;
-        padding: 10px;
-        color: white;
-        text-transform: uppercase;
-      }
-
-      .event {
-        width: 300px;
-        height: 380px;
-        padding-bottom: 20px;
-        background: rgb(255, 255, 255);
-        display: block;
-
-        .image {
-          width: 100%;
-          height: 170px;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        p {
-          color: rgb(15, 80, 71);
-          font-size: 12px;
-          text-align: left;
-          padding: 0 10px;
-        }
-        p.header {
-          font-size: 15px;
-          text-transform: uppercase;
-        }
-        span {
-          display: block;
-          font-size: 14px;
-          text-align: left;
-
-          color: goldenrod;
-          padding: 0 10px;
-        }
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: rgb(23, 169, 135);
-          font-weight: 600;
-          width: 80%;
-          height: 40px;
-          border: 1px solid rgb(24, 157, 124);
-          margin: 0 auto;
-
-          &:hover {
-            background: linear-gradient(
-              to right,
-              rgb(253, 147, 1),
-              rgb(255, 82, 22)
-            );
-            color: white;
-            border: none;
-          }
-        }
+        color: rgb(23, 169, 135);
+        font-weight: 600;
+        width: 80%;
+        height: 40px;
+        border: 1px solid rgb(24, 157, 124);
+        margin: 0 auto;
+        text-decoration: none;
 
         &:hover {
-          box-shadow: 0 3px 18px 1px rgb(64, 64, 64);
-          border: 1px solid white;
+          background: linear-gradient(
+            to right,
+            rgb(253, 147, 1),
+            rgb(255, 82, 22)
+          );
+          color: white;
+          border: none;
         }
       }
 
-      @media screen and (max-width: 1000px) {
-        .content {
-          width: 100%;
-        }
-        .event {
-          width: 300px;
-
-          @media screen and (max-width: 400px) {
-            width: 95vw;
-          }
-        }
+      &:hover {
+        box-shadow: 0 3px 18px 1px rgb(64, 64, 64);
+        border: 1px solid white;
       }
+
+      @media screen and (max-width: 500px) {
+        width: 80vw;
+      }
+    }
+
+    .el-carousel__item.is-active .is-in-stage {
+      background: white;
+    }
+
+    .el-carousel__item:nth-child(2n) {
+      background-color: #99a9bf;
+    }
+
+    .el-carousel__item:nth-child(2n + 1) {
+      background-color: #d3dce6;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
     }
   }
 }
 </style>
+
+
+
+
+  
+
+

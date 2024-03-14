@@ -5,10 +5,10 @@
     element-loading-svg-view-box="-10, -10, 50, 50"
   >
     <div class="main-component">
-      <NuxtLayout name="page-header" />
       <div class="page-content">
         <NuxtPage />
       </div>
+      <NuxtLayout name="page-header" />
       <NuxtLayout name="page-footer" />
     </div>
     <!-- <div class="menu-component" v-if="toggleMenu">

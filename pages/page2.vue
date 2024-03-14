@@ -49,59 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="course-expo">
-      <div class="course-expo-wrapper">
-        <div class="left-content">
-          <div class="image">
-            <img src="../assets/learn-b.jpg" alt="" />
-          </div>
-        </div>
-        <div class="right-content">
-          <div class="header-background">
-            <h2>What does it take to learn forex?</h2>
-          </div>
-          <p>
-            Forex just like any other trade or skill, needs some prerequisites
-            or forehand knowledge before jumping into the field. Knowing what it
-            takes and what you'll need to learn this skill successfully is very
-            important.
-          </p>
-          <ul>
-            <li>discipline and focus</li>
-            <li>discipline and focus</li>
-            <li>discipline and focus</li>
-            <li>discipline and focus</li>
-            <li>discipline and focus</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="course-expo">
-      <div class="course-expo-wrapper">
-        <div class="left-content-2">
-          <div class="header-background">
-            <h2>What you should know before trading forex?</h2>
-          </div>
-          <p>
-            Forex just like any other trade or skill, needs some prerequisites
-            or forehand knowledge before jumping into the field. Knowing some
-            basic building blocks of forex will help you not to carry the wrong
-            mindset into the forex market.
-          </p>
-          <h3>forex is not:</h3>
-          <ul>
-            <li>a get rich quick scheme</li>
-            <li>a get rich quick scheme</li>
-            <li>a get rich quick scheme</li>
-          </ul>
-        </div>
-        <div class="right-content-2">
-          <div class="image">
-            <img src="../assets/group.jpeg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="courses-array">
       <div class="wrapper">
         <div class="content">
@@ -169,7 +117,7 @@
 
   .wrapper {
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     padding-top: 18vh;
     margin: 0 auto;
     background: url(../assets/landing_background_3.jpg);
@@ -177,6 +125,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
+    padding-bottom: 4vh;
     .blur-wrapper {
       background: rgb(42, 81, 76);
       opacity: 0.7;

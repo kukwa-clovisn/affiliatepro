@@ -88,7 +88,7 @@ const appointmentFunc = (e) => {
   loader.value = true;
 
   axios
-    .post("https://api.gospelfxtrader.com/api/appointment", appointmentBody)
+    .post("https://affiliatepro-api.onrender.com/api/appointment", appointmentBody)
     .then((res) => {
       loader.value = false;
       setTimeout(() => {

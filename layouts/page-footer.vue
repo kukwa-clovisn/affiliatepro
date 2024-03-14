@@ -34,7 +34,12 @@
       </div>
       <!-- <div class="contacts">contacts</div> -->
     </div>
-    <div class="copyright">&copy; copyright codingherald2023</div>
+    <div class="copyright">
+      &copy;
+      <a href="https://advancedtechacademy.onrender.com" target="_blank">
+        copyright codingherald2023</a
+      >
+    </div>
   </footer>
 </template>
 
@@ -148,6 +153,11 @@ footer {
     padding: 20px;
     color: rgb(213, 211, 211);
     font-weight: lighter;
+
+    a {
+      text-decoration: none;
+      color: rgb(222, 252, 243);
+    }
   }
 }
 </style>

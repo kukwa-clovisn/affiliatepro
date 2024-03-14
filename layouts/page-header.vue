@@ -59,6 +59,7 @@ const toggleMenu = useMenuState();
     border-radius: 10px;
     background: rgb(255, 255, 255);
     box-shadow: 0 0 6px 1px rgb(205, 205, 205);
+    z-index: 1;
 
     .header-logo {
       width: 23%;

@@ -84,54 +84,50 @@ const status = reactive({
 
 const signupFunc = (e) => {
   loading.value = true;
-  if (
-    user.username.length >= 3 &&
-    user.email.length >= 8 &&
-    user.password.length >= 4
-  ) {
+  if (user.username.length >= 3 && user.password.length >= 5) {
     axios
-      .post("https://api.gospelfxtrader.com/api/signup", user)
+      .post("https://affiliatepro-api.onrender.com/api/signup", user)
       .then((res) => {
-        loading.value = false;
-
         ElMessageBox.alert(
-          "Congratulations. Your signup is successfullyou can head over to the signin page to make ues of our free courses ",
+          "Congratulations. Your signup is successfull. You can head over to the signin page to make ues of our free courses ",
           "signup successful",
           {
             // if you want to disable its autofocus
             // autofocus: false,
-            confirmButtonText: "Homepage",
+            confirmButtonText: "Go To Courses",
             callback: () => {
-              router.push("/");
+              router.push("/signin");
             },
           }
         );
+        loading.value = false;
       })
       .catch((err) => {
-        loading.value = false;
-        ElMessageBox.alert(
-          "Your signup request has not been submitted . Try Again ",
-          "signup Failed",
-          {
-            // if you want to disable its autofocus
-            // autofocus: false,
-            confirmButtonText: "OK",
-            callback: () => {
-              router.push("/signup");
-            },
-          }
-        );
+        ElMessageBox.alert(err.response.data.msg, {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "OK",
+          callback: () => {
+            router.push("/signup");
+          },
+        });
       });
+    loading.value = false;
   } else {
-    ElMessageBox.alert("Invalid Credentials ", "signup Failed", {
-      // if you want to disable its autofocus
-      // autofocus: false,
-      confirmButtonText: "OK",
-      callback: () => {
-        router.push("/signup");
-      },
-    });
+    ElMessageBox.alert(
+      "Invalid Credentials. Password must be greater that five(5) characters and username must be greater than three(3) characters.",
+      "signup Failed",
+      {
+        // if you want to disable its autofocus
+        // autofocus: false,
+        confirmButtonText: "OK",
+        callback: () => {
+          router.push("/signup");
+        },
+      }
+    );
   }
+  loading.value = false;
 };
 </script>
 
