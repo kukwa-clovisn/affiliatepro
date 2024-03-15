@@ -62,13 +62,15 @@
 <script setup>
 import axios from "axios";
 import { useRouter } from "vue-router";
+const loading = useLoaderState();
 
 const router = useRouter();
 const username = ref("");
 const courseId = ref("");
 const courses = ref([]);
 
-onMounted(() => {
+onBeforeMount(() => {
+  loading.value = true;
   axios.defaults.headers.common[
     "Authorization"
   ] = `Bearer ${localStorage.getItem("accessToken")}`;
@@ -78,13 +80,16 @@ onMounted(() => {
   axios("https://affiliatepro-api.onrender.com/api/token")
     .then((res) => {
       username.value = res.data.username;
+      loading.value = fales;
     })
     .catch((err) => {
       router.push("/signin");
+      loading.value = false;
     });
 });
 
 const getCourses = (id) => {
+  loading.value = true;
   axios
     .post("https://affiliatepro-api.onrender.com/api/course/some", {
       courseName: id,
@@ -92,8 +97,12 @@ const getCourses = (id) => {
     .then((res) => {
       courses.value = res.data;
       localStorage.setItem("courseName", id);
+      loading.value = false;
     })
-    .catch((err) => err);
+    .catch((err) => {
+      loading.value = false;
+      return err;
+    });
 };
 
 const startCourse = (id, courseName) => {

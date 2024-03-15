@@ -31,7 +31,7 @@
                 mentorship</nuxt-link
               ></button
             ><button>
-              <nuxt-link to="/signin"
+              <nuxt-link to="/courses"
                 ><i class="fa-regular fa-circle-right"></i>free
                 courses</nuxt-link
               >

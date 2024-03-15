@@ -14,7 +14,7 @@
               ><i class="fa-regular fa-circle-right"></i>join
               mentorship</nuxt-link
             ></button
-          ><button @click="($event) => navigateTo('/signin')">
+          ><button @click="($event) => navigateTo('/courses')">
             <i class="fa-regular fa-circle-play"></i>free courses
           </button>
         </div>
