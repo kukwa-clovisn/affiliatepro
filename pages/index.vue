@@ -62,7 +62,9 @@
             traders helping traders with most of their trading challenges
             psychologically and technically
           </p>
-          <button data-aos="zoom-in">learn more</button>
+          <nuxt-link to="/courses" data-aos="zoom-in"
+            >check out my free courses</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -98,7 +100,8 @@
             <input
               type="email"
               placeholder="Your Email Address Here...."
-            /><button>subscribe</button>
+              v-model="email"
+            /><button @click="subscribeFunc(email)">subscribe</button>
           </div>
         </div>
       </div>
@@ -106,6 +109,51 @@
     <MainContact />
   </div>
 </template>
+
+<script setup>
+import axios from "axios";
+import { useRouter } from "nuxt/app";
+const router = useRouter();
+const email = ref("");
+
+const subscribeFunc = (email) => {
+  axios
+    .post("https://affiliatepro-api.onrender.com/api/subscribe", {
+      email: email,
+    })
+    .then((res) => {
+      ElMessageBox.alert(res.data.msg, {
+        // if you want to disable its autofocus
+        // autofocus: false,
+        confirmButtonText: "Done",
+        callback: () => {
+          router.push("/");
+        },
+      });
+    })
+    .catch((err) => {
+      if (err.response.data) {
+        ElMessageBox.alert(err.response.data.msg, {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "Close",
+          callback: () => {
+            router.push("/");
+          },
+        });
+      } else {
+        ElMessageBox.alert(err.message, {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "Close",
+          callback: () => {
+            router.push("/");
+          },
+        });
+      }
+    });
+};
+</script>
 
 
 
@@ -625,12 +673,16 @@ hr {
           font-size: 16px;
           line-height: 24px;
         }
-        button {
-          width: 150px;
+        a {
+          width: fit-content;
+          padding: 2px 20px;
           height: 47px;
           border: none;
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           border-radius: 10px;
+          text-decoration: none;
           background: linear-gradient(
             to right,
             rgb(253, 147, 1),

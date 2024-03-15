@@ -6,27 +6,45 @@
       </div>
       <p>want to link up with me? check out our social media links below...</p>
       <hr />
-   
+
       <p>Get to me on whatsapp</p>
       <a href="https://wa.link/s5b5y7" class="whatsapp">start whatsapp chat</a>
 
       <div class="links">
-        <div class="link">
-          <div class="link-logo"><i class="fa-brands fa-facebook"></i></div>
+        <a
+          href="https://www.facebook.com/Gospelfxtrader/"
+          target="_blank"
+          class="link"
+          ><div class="link-logo"><i class="fa-brands fa-facebook"></i></div>
           <div class="link-name">facebook</div>
-        </div>
-        <div class="link">
+        </a>
+
+        <a
+          href="https://twitter.com/Gospelfxtrader?t=zkcylbRMOMUSh2UaOjNd7Q&s=09"
+          target="_blank"
+          class="link"
+        >
           <div class="link-logo"><i class="fa-brands fa-twitter"></i></div>
           <div class="link-name">twitter</div>
-        </div>
-        <div class="link">
-          <div class="link-logo"><i class="fa-brands fa-linkedin"></i></div>
-          <div class="link-name">linkedin</div>
-        </div>
-        <div class="link">
+        </a>
+
+        <a
+          href="https://www.youtube.com/@GOSPELFXTRADER"
+          target="_blank"
+          class="link"
+        >
+          <div class="link-logo"><i class="fa-brands fa-youtube"></i></div>
+          <div class="link-name">youtube</div></a
+        >
+
+        <a
+          href="https://www.instagram.com/gospelfxtrader/?igsh=cHpkeDVhdHd4OWU5"
+          target="_blank"
+          class="link"
+        >
           <div class="link-logo"><i class="fa-brands fa-instagram"></i></div>
           <div class="link-name">instagram</div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -98,6 +116,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        text-decoration: none;
 
         .link-logo {
           width: 40%;

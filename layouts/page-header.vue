@@ -2,7 +2,9 @@
   <div :class="[{ squeezeHeader: stickyHeader }, 'header-component']">
     <div class="header-wrapper">
       <div class="header-logo">
-        <div class="header-logo-wrapper">Gospelfx <span>trader</span></div>
+        <div class="header-logo-wrapper" @click="navigateTo('/')">
+          Gospelfx <span>trader</span>
+        </div>
       </div>
       <div class="header-items">
         <div class="header-items-list">
@@ -72,6 +74,7 @@ const toggleMenu = useMenuState();
         justify-content: center;
         align-items: center;
         position: relative;
+        cursor: pointer;
 
         img {
           display: block;

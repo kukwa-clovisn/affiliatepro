@@ -49,7 +49,14 @@
         </div>
       </div>
     </div>
-
+    <div class="events-div" id="events">
+      <p>events coming soon. Stay tuned</p>
+      <p>
+        We'll be uploading our upcoming events here very soon.
+        <a href="/#newsletter">Subscribe</a> to our newsletter to get notified
+        whenever we have an event coming up..
+      </p>
+    </div>
     <div class="courses-array">
       <div class="wrapper">
         <div class="content">
@@ -340,6 +347,17 @@
           }
         }
       }
+    }
+  }
+
+  .events-div {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+
+    p {
+      width: 80%;
+      margin: 10px auto;
     }
   }
   .course-expo {

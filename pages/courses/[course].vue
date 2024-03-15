@@ -28,10 +28,10 @@ onBeforeMount(() => {
     "accessId"
   )}`;
 
-  axios("http://localhost:3003/api/token")
+  axios("https://affiliatepro-api.onrender.com/api/token")
     .then((res) => {
       axios
-        .post("http://localhost:3003/api/course/id", {
+        .post("https://affiliatepro-api.onrender.com/api/course/id", {
           courseId: localStorage.getItem("courseId"),
         })
         .then((res) => {

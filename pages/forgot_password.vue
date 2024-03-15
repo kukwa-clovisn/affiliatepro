@@ -4,7 +4,7 @@
       <h1>Forgot your password??</h1>
       <p>Let us help you recover your account...</p>
       <div class="fpassword-img">
-        <img src="~/assets/auth.png" alt="" />
+        <img src="~/assets/forgot_password.png" alt="" />
       </div>
       <div class="fpassword-img-right">
         <img src="~/assets/auth.png" alt="" />

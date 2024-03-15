@@ -15,23 +15,25 @@
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
           <p class="header">Hilton hotel</p>
           <span> yaounde </span>
+          <span>Febuary 24th 2024</span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
+          <!-- <a href="/academy/#events">check event</a> -->
         </el-carousel-item>
         <el-carousel-item>
           <div class="image"><img src="../../assets/gosp1.png" alt="" /></div>
           <p class="header">Best Western Hotel</p>
           <span> Douala </span>
+          <span>March 02nd 2024</span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
+          <!-- <a href="/academy/#events">check event</a> -->
         </el-carousel-item>
 
         <el-carousel-item>
@@ -40,12 +42,13 @@
           </div>
           <p class="header">Charriote Hotel</p>
           <span> Buea </span>
+          <span>March 09th 2024 </span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
+          <!-- <a href="/academy/#events">check event</a> -->
         </el-carousel-item>
         <el-carousel-item>
           <div class="image">
@@ -53,23 +56,25 @@
           </div>
           <p class="header">Charriote Hotel</p>
           <span> Bafoussam </span>
+          <span>March 16th 2024</span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/academy">check event</nuxt-link>
+          <a href="/academy/#events">check event</a>
         </el-carousel-item>
         <el-carousel-item>
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
           <p class="header">Hilton Hotel</p>
           <span> Bamenda </span>
+          <span>March 23rd 2024</span>
           <p>
             this event was a tour with exness cameroon to educate the masses
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/academy">check event</nuxt-link>
+          <a href="/academy/#events">check event</a>
         </el-carousel-item>
       </el-carousel>
     </div>
