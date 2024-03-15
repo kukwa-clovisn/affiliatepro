@@ -3,6 +3,9 @@
     <div class="courses-header-wrapper">
       <h1>forex trading</h1>
       <h2>free courses</h2>
+      <h3>
+        hi <span>{{ username }}</span>
+      </h3>
     </div>
     <p>
       Search through the list of free courses available here for you at no cost
@@ -16,16 +19,18 @@
           name="search"
           id="search-course"
           placeholder="search course"
-        /><button>find course</button>
+          v-model="courseId"
+        /><button @click="getCourses(courseId)">find course</button>
       </div>
       <datalist id="courses">
-        <option value="Introduction To Forex">course 1</option>
+        <!-- <option value="Introduction To Forex">course 1</option> -->
+        <option value="Introduction to Trading">course 1</option>
         <option value="Technical Analysis">course 2</option>
         <option value="Market Structure">course 3</option>
         <option value="Smart Money Concept">course 4</option>
         <option value="Advanced Smart Money Concept">course 5</option>
-        <option value="Psycology Of Trading">course 6</option>
-        <option value="Real Life Trading Sessions">course 7</option>
+        <option value="Psychology of Trading">course 6</option>
+        <option value="Real-life Trading Examples">course 7</option>
       </datalist>
     </div>
     <h3>
@@ -33,9 +38,70 @@
       videos is for educational purposes only. Always conduct your research and
       consider consulting a financial advisor.
     </h3>
-    <courses />
+    <h1>{{}}</h1>
+    <div class="courses-content">
+      <div class="courses" v-if="courses.length">
+        <div class="course" v-for="(course, index) in courses" :key="index">
+          <div class="image">
+            <img src="~/assets/Achievement-pana.png" alt="" />
+          </div>
+          <span>{{ index + 1 }}</span>
+          <div class="details">
+            <h2>{{ course.courseName }}</h2>
+            <p>{{ course.description }}</p>
+            <button @click="startCourse(course._id, course.courseName)">
+              start course
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup>
+import axios from "axios";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+const username = ref("");
+const courseId = ref("");
+const courses = ref([]);
+
+onMounted(() => {
+  axios.defaults.headers.common[
+    "Authorization"
+  ] = `Bearer ${localStorage.getItem("accessToken")}`;
+  axios.defaults.headers.common["accessId"] = `${localStorage.getItem(
+    "accessId"
+  )}`;
+  axios("https://affiliatepro-api.onrender.com/api/token")
+    .then((res) => {
+      username.value = res.data.username;
+    })
+    .catch((err) => {
+      router.push("/signin");
+    });
+});
+
+const getCourses = (id) => {
+  axios
+    .post("https://affiliatepro-api.onrender.com/api/course/some", {
+      courseName: id,
+    })
+    .then((res) => {
+      courses.value = res.data;
+      localStorage.setItem("courseName", id);
+    })
+    .catch((err) => err);
+};
+
+const startCourse = (id, courseName) => {
+  localStorage.setItem("courseId", id);
+  router.push(`/courses/${courseName}`);
+};
+</script>
+
 
 <style lang="scss" scoped>
 .courses-container {
@@ -74,6 +140,12 @@
       color: rgb(230, 89, 7);
       font-weight: 700;
       position: relative;
+    }
+
+    h3 {
+      span {
+        color: rgb(37, 97, 89);
+      }
     }
 
     @media screen and (max-width: 768px) {
@@ -131,6 +203,112 @@
     width: 80%;
     margin: 20px auto;
     color: red;
+  }
+
+  .courses-content {
+    width: 100%;
+    height: fit-content;
+
+    h1 {
+      padding: 20px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .courses {
+      width: 90%;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+
+      .course {
+        width: 300px;
+        height: 500px;
+        border: 1px solid rgb(182, 203, 198);
+        position: relative;
+        margin: 5vh auto;
+
+        .image {
+          position: relative;
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        span {
+          position: absolute;
+          top: -5%;
+          left: -5%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          border: 3px solid rgb(163, 198, 189);
+          background: transparent;
+
+          color: rgb(37, 97, 89);
+          font-weight: 600;
+        }
+
+        .details {
+          width: 100%;
+          padding: 10px;
+
+          h2 {
+            text-transform: uppercase;
+            color: rgb(37, 97, 89);
+            width: 90%;
+            margin: 10px auto;
+          }
+
+          button {
+            border: 1px solid rgb(175, 207, 203);
+            background: transparent;
+            color: rgb(37, 97, 89);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 45px;
+            border-radius: 3px;
+            margin: auto;
+
+            @media screen and (max-width: 300px) {
+              width: 90%;
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 3px 15px 2px rgba(171, 191, 184, 0.734);
+
+          span {
+            transform: scale(1.2);
+            background: rgb(37, 97, 89);
+            color: white;
+            border: 4px solid orange;
+          }
+
+          .details {
+            button {
+              background: rgb(37, 97, 89);
+              color: white;
+              border-radius: 30px;
+            }
+          }
+        }
+        @media screen and (max-width: 660px) {
+          width: 90%;
+        }
+      }
+    }
   }
 }
 </style>

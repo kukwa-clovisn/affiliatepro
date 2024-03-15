@@ -12,7 +12,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>2 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -27,7 +27,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>2 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -42,7 +42,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>3 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -60,7 +60,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>2 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>4 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -92,7 +92,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>1 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 
@@ -107,7 +107,7 @@
             <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
               <span>7 videos </span>
-              <nuxt-link to="/page2">start course</nuxt-link>
+              <nuxt-link to="/academy">start course</nuxt-link>
             </div>
           </div>
 

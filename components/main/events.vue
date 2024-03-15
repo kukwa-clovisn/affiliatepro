@@ -8,7 +8,7 @@
           Enjoy our endless and outstanding tour across the nation and across
           different fields.
         </p>
-        <nuxt-link to="/page2">about academy</nuxt-link>
+        <nuxt-link to="/academy">about academy</nuxt-link>
       </div>
       <el-carousel :interval="3000" type="card" height="450px">
         <el-carousel-item>
@@ -20,7 +20,7 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
         </el-carousel-item>
         <el-carousel-item>
           <div class="image"><img src="../../assets/gosp1.png" alt="" /></div>
@@ -31,7 +31,7 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
         </el-carousel-item>
 
         <el-carousel-item>
@@ -45,7 +45,7 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <!-- <nuxt-link to="/page2">check event</nuxt-link> -->
+          <!-- <nuxt-link to="/academy">check event</nuxt-link> -->
         </el-carousel-item>
         <el-carousel-item>
           <div class="image">
@@ -58,7 +58,7 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/page2">check event</nuxt-link>
+          <nuxt-link to="/academy">check event</nuxt-link>
         </el-carousel-item>
         <el-carousel-item>
           <div class="image"><img src="../../assets/gospel4.png" alt="" /></div>
@@ -69,7 +69,7 @@
             about forex trading and the green pasture that lies therein the
             forex industry.
           </p>
-          <nuxt-link to="/page2">check event</nuxt-link>
+          <nuxt-link to="/academy">check event</nuxt-link>
         </el-carousel-item>
       </el-carousel>
     </div>

@@ -60,8 +60,7 @@ function signinFunc() {
   axios
     .post("https://affiliatepro-api.onrender.com/api/signin", user)
     .then((res) => {
-      console.log(res);
-      if (res.statusText === "OK" || res.status === 200 || res.status === 201) {
+      if (res.statusText === "OK" || res.status >= 200 || res.status < 300) {
         ElMessageBox.alert(
           "Congratulations. Your signin is successfull. you can head over to the signin page to make ues of our free courses ",
           "login successful",
@@ -70,7 +69,7 @@ function signinFunc() {
             // autofocus: false,
             confirmButtonText: "Courses",
             callback: () => {
-              router.push("/page2");
+              router.push("/courses");
             },
           }
         );
@@ -83,7 +82,7 @@ function signinFunc() {
           "Authorization"
         ] = `Bearer ${localStorage.getItem("accessToken")}`;
 
-        router.push("/page2");
+        router.push("/courses");
         loading.value = false;
       } else {
         ElMessageBox.alert(res.response.data.msg, {
@@ -98,15 +97,26 @@ function signinFunc() {
       }
     })
     .catch((err) => {
-      console.log(err);
-      ElMessageBox.alert(err.response.data.msg, {
-        // if you want to disable its autofocus
-        // autofocus: false,
-        confirmButtonText: "OK",
-        callback: () => {
-          router.push("/signin");
-        },
-      });
+      if (err.response.data) {
+        ElMessageBox.alert(err.response.data.msg, {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "OK",
+          callback: () => {
+            router.push("/signin");
+          },
+        });
+      } else {
+        ElMessageBox.alert(err.message, {
+          // if you want to disable its autofocus
+          // autofocus: false,
+          confirmButtonText: "OK",
+          callback: () => {
+            router.push("/signin");
+          },
+        });
+      }
+
       loading.value = false;
     });
 }

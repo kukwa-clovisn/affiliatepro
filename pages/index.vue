@@ -296,7 +296,7 @@ hr {
             top: 20%;
             left: -50%;
             background: linear-gradient(rgb(14, 109, 74), rgb(14, 145, 112));
-            animation: rotate 2s linear infinite;
+            animation: rotate 2.5s linear infinite;
           }
           &::after {
             content: "";
@@ -310,7 +310,6 @@ hr {
               rgb(253, 147, 1),
               rgb(255, 82, 22)
             );
-            transform: rotateZ(35deg);
             animation: reverserotate 2s linear infinite;
           }
 
