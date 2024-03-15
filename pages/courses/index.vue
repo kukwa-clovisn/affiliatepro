@@ -80,7 +80,7 @@ onBeforeMount(() => {
   axios("https://affiliatepro-api.onrender.com/api/token")
     .then((res) => {
       username.value = res.data.username;
-      loading.value = fales;
+      loading.value = false;
     })
     .catch((err) => {
       router.push("/signin");
