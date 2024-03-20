@@ -72,6 +72,7 @@
 import axios from "axios";
 
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 
 const user = reactive({ username: "", email: "", password: "" });
@@ -111,8 +112,8 @@ const signupFunc = (e) => {
             router.push("/signup");
           },
         });
+        loading.value = false;
       });
-    loading.value = false;
   } else {
     ElMessageBox.alert(
       "Invalid Credentials. Password must be greater that five(5) characters and username must be greater than three(3) characters.",
@@ -126,8 +127,8 @@ const signupFunc = (e) => {
         },
       }
     );
+    loading.value = false;
   }
-  loading.value = false;
 };
 </script>
 

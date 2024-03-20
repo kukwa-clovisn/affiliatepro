@@ -35,9 +35,9 @@
       <!-- <div class="contacts">contacts</div> -->
     </div>
     <div class="copyright">
-      &copy;
-      <a href="https://advancedtechacademy.onrender.com" target="_blank">
-        copyright codingherald2023</a
+      Want to own your own website,
+      <a href="https://wa.link/w04zuc" target="_blank">
+        click here &copy;copyright codingherald2023</a
       >
     </div>
   </footer>

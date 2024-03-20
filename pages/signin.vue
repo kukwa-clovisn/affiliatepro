@@ -62,12 +62,12 @@ function signinFunc() {
     .then((res) => {
       if (res.statusText === "OK" || res.status >= 200 || res.status < 300) {
         ElMessageBox.alert(
-          "Congratulations. Your signin is successfull. you can head over to the signin page to make ues of our free courses ",
+          "Congratulations. Your signin is successfull. you can head over to the courses page to make ues of our free courses ",
           "login successful",
           {
             // if you want to disable its autofocus
             // autofocus: false,
-            confirmButtonText: "Courses",
+            confirmButtonText: "Done",
             callback: () => {
               router.push("/courses");
             },

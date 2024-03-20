@@ -43,9 +43,10 @@
       <div class="courses" v-if="courses.length">
         <div class="course" v-for="(course, index) in courses" :key="index">
           <div class="image">
-            <img src="~/assets/Achievement-pana.png" alt="" />
+            <img src="~/assets/course.png" alt="forex courses" />
+            <span>{{ index + 1 }}</span>
           </div>
-          <span>{{ index + 1 }}</span>
+
           <div class="details">
             <h2>{{ course.courseName }}</h2>
             <p>{{ course.description }}</p>
@@ -80,6 +81,13 @@ onBeforeMount(() => {
   axios("https://affiliatepro-api.onrender.com/api/token")
     .then((res) => {
       username.value = res.data.username;
+
+      axios("https://affiliatepro-api.onrender.com/api/course/all")
+        .then((res) => {
+          courses.value = res.data;
+          console.log(data);
+        })
+        .catch((err) => err);
       loading.value = false;
     })
     .catch((err) => {
@@ -229,52 +237,60 @@ const startCourse = (id, courseName) => {
       margin: 10px auto;
       display: flex;
       flex-wrap: wrap;
+      gap: 10px;
 
       .course {
-        width: 300px;
-        height: 500px;
-        border: 1px solid rgb(182, 203, 198);
+        width: 25%;
+        height: fit-content;
+        // border: 1px solid rgb(182, 203, 198);
         position: relative;
-        margin: 5vh auto;
+        margin: 4vh auto;
 
         .image {
           position: relative;
           width: 100%;
-          height: 300px;
+          height: fit-content;
           overflow: hidden;
 
           img {
             object-fit: cover;
             width: 100%;
-            height: 100%;
+            height: auto;
           }
-        }
-        span {
-          position: absolute;
-          top: -5%;
-          left: -5%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 50px;
-          height: 50px;
-          border-radius: 100%;
-          border: 3px solid rgb(163, 198, 189);
-          background: transparent;
+          span {
+            position: absolute;
+            top: -1%;
+            left: -1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 0 0 30% 0;
+            border: 3px solid rgb(163, 198, 189);
+            background: transparent;
 
-          color: rgb(37, 97, 89);
-          font-weight: 600;
+            color: rgb(37, 97, 89);
+            font-weight: 600;
+          }
         }
 
         .details {
           width: 100%;
-          padding: 10px;
+          padding: 10px 20px;
+          padding-bottom: 30px;
 
           h2 {
             text-transform: uppercase;
             color: rgb(37, 97, 89);
-            width: 90%;
-            margin: 10px auto;
+            width: 100%;
+            // margin: 10px auto;
+            text-align: left;
+            font-size: 20px;
+          }
+
+          p {
+            text-align: left;
           }
 
           button {
@@ -288,6 +304,7 @@ const startCourse = (id, courseName) => {
             height: 45px;
             border-radius: 3px;
             margin: auto;
+            margin-left: 0;
 
             @media screen and (max-width: 300px) {
               width: 90%;
@@ -296,11 +313,12 @@ const startCourse = (id, courseName) => {
         }
 
         &:hover {
-          box-shadow: 0 3px 15px 2px rgba(171, 191, 184, 0.734);
+          /* box-shadow: 0 3px 15px 2px rgba(171, 191, 184, 0.734); */
+          transform: scale(1.05);
 
           span {
             transform: scale(1.2);
-            background: rgb(37, 97, 89);
+            background: rgb(216, 162, 14);
             color: white;
             border: 4px solid orange;
           }
@@ -316,6 +334,10 @@ const startCourse = (id, courseName) => {
         @media screen and (max-width: 660px) {
           width: 90%;
         }
+      }
+
+      @media screen and (max-width:600px){
+        width:100%;
       }
     }
   }
