@@ -1,0 +1,1 @@
+<template><div class="blog-menu-container">menu dashboard</div></template>

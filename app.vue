@@ -1,119 +1,123 @@
 <template>
-  <main
-    v-loading="loading"
-    :element-loading-svg="svg"
-    element-loading-svg-view-box="-10, -10, 50, 50"
-  >
-    <div class="main-component">
-      <div class="page-content">
-        <NuxtPage />
+  <main v-loading="loading">
+    <NuxtLayout>
+      <div class="main-component">
+        <div class="page-content">
+          <NuxtPage />
+        </div>
+        <!-- <NuxtLayout name="page-header" /> -->
+        <!-- <NuxtLayout name="page-footer" /> -->
+        <blogCreatePost v-if="createPost" />
       </div>
-      <NuxtLayout name="page-header" />
-      <NuxtLayout name="page-footer" />
-    </div>
-    <!-- <div class="menu-component" v-if="toggleMenu">
-      <MenuComponent />
-    </div> -->
-    <div
-      :class="[
-        { active: menuState },
-        { inactive: !menuState },
-        'menu-container',
-      ]"
-      @click="openchat = false"
-    >
-      <div class="blur-wrapper" @click="($event) => (menuState = false)"></div>
+
       <div
         :class="[
-          { 'is-active': menuState },
+          { active: menuState },
           { inactive: !menuState },
-          'menu-wrapper',
+          'menu-container',
         ]"
+        @click="openchat = false"
       >
-        <button class="close" @click="($event) => (menuState = false)">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="menu-header">
-          <div class="logo">
-            <img
-              @click="($event) => navigateTo('/')"
-              src="./assets/gospel.png"
-              alt=""
-            />
-          </div>
-          <p>Book and appointment with me today.</p>
-          <button
-            class="appointment"
-            @click="
-              ($event) => {
-                navigateTo('/appointment'), (menuState = false);
-              }
-            "
-          >
-            book an appointment now!
+        <div
+          class="blur-wrapper"
+          @click="($event) => (menuState = false)"
+        ></div>
+        <div
+          :class="[
+            { 'is-active': menuState },
+            { inactive: !menuState },
+            'menu-wrapper',
+          ]"
+        >
+          <button class="close" @click="($event) => (menuState = false)">
+            <i class="fa-solid fa-xmark"></i>
           </button>
-        </div>
+          <div class="menu-header">
+            <div class="logo">
+              <img
+                @click="($event) => navigateTo('/')"
+                src="./assets/gospel.png"
+                alt=""
+              />
+            </div>
+            <p>Book and appointment with me today.</p>
+            <button
+              class="appointment"
+              @click="
+                ($event) => {
+                  navigateTo('/appointment'), (menuState = false);
+                }
+              "
+            >
+              book an appointment now!
+            </button>
+          </div>
 
-        <div class="services">
-          <h2>Browse our services</h2>
-          <div class="service-wrapper">
-            <NuxtLink to="/" @click="($event) => (menuState = false)"
-              >home <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/#about" @click="($event) => (menuState = false)"
-              >About <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/#courses" @click="($event) => (menuState = false)"
-              >courses <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/#contacts" @click="($event) => (menuState = false)"
-              >contacts <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/#newsletter" @click="($event) => (menuState = false)"
-              >newsletter <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/appointment" @click="($event) => (menuState = false)"
-              >appointment<i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-          </div>
-          <hr />
-          <h2>join mentorship</h2>
-          <div class="service-wrapper">
-            <NuxtLink to="/signup" @click="($event) => (menuState = false)"
-              >signup <i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-            <NuxtLink to="/signin" @click="($event) => (menuState = false)"
-              >signin<i class="fa-solid fa-arrow-right"></i
-            ></NuxtLink>
-          </div>
-          <h2>Connect with us:</h2>
-          <div class="media-wrapper">
-            <a href="tel:+653821258" class="link" title="Give us a call"
-              ><i class="fa-solid fa-phone"></i
-            ></a>
-            <a
-              href="https://wa.link/s5b5y7"
-              class="link"
-              title="Chat us on whatsapp"
-              ><i class="fa-brands fa-whatsapp"></i
-            ></a>
-            <a
-              href="https://tr.ee/aviBLWXJ45"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="link"
-              ><i class="fa-brands fa-facebook" title="Follow on facebook"></i
-            ></a>
+          <div class="services">
+            <h2>Browse our services</h2>
+            <div class="service-wrapper">
+              <NuxtLink to="/" @click="($event) => (menuState = false)"
+                >home <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink to="/#about" @click="($event) => (menuState = false)"
+                >About <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink to="/#courses" @click="($event) => (menuState = false)"
+                >courses <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink to="/#contacts" @click="($event) => (menuState = false)"
+                >contacts <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink
+                to="/#newsletter"
+                @click="($event) => (menuState = false)"
+                >newsletter <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink
+                to="/appointment"
+                @click="($event) => (menuState = false)"
+                >appointment<i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+            </div>
+            <hr />
+            <h2>join mentorship</h2>
+            <div class="service-wrapper">
+              <NuxtLink to="/signup" @click="($event) => (menuState = false)"
+                >signup <i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+              <NuxtLink to="/signin" @click="($event) => (menuState = false)"
+                >signin<i class="fa-solid fa-arrow-right"></i
+              ></NuxtLink>
+            </div>
+            <h2>Connect with us:</h2>
+            <div class="media-wrapper">
+              <a href="tel:+653821258" class="link" title="Give us a call"
+                ><i class="fa-solid fa-phone"></i
+              ></a>
+              <a
+                href="https://wa.link/s5b5y7"
+                class="link"
+                title="Chat us on whatsapp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://tr.ee/aviBLWXJ45"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+                ><i class="fa-brands fa-facebook" title="Follow on facebook"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </NuxtLayout>
   </main>
 </template>
 
 <script setup>
 useHead({
-  title: "Gospelfxtrader ",
+  title: "Gospelfxtrader",
   viewport: "width:device-width, initial-scale=1",
   charset: "utf-8",
   meta: [
@@ -151,17 +155,18 @@ useHead({
 
 const menuState = useMenuState();
 const loading = useLoaderState();
+const createPost = useCreatePostState();
 
-const svg = `
-        <path class="path" d="
-          M 30 15
-          L 28 17
-          M 25.61 25.61
-          A 15 15, 0, 0, 1, 15 30
-          A 15 15, 0, 1, 1, 27.99 7.5
-          L 15 15
-        " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>
-      `;
+// const svg = `
+//         <path class="path" d="
+//           M 30 15
+//           L 28 17
+//           M 25.61 25.61
+//           A 15 15, 0, 0, 1, 15 30
+//           A 15 15, 0, 1, 1, 27.99 7.5
+//           L 15 15
+//         " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"/>
+//       `;
 </script>
 
 <style lang="scss" >
@@ -192,7 +197,7 @@ body,
 * {
   box-sizing: border-box;
   color: rgb(31, 32, 33);
-  color: rgb(5, 43, 39);
+  color: rgb(6, 68, 62);
 }
 
 .blur-wrapper {

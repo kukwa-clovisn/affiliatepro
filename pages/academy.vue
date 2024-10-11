@@ -9,7 +9,7 @@
           market moves the way it does and why it does so.
         </p>
         <div class="page-buttons">
-          <button>
+          <button class="button">
             <nuxt-link to="/signup"
               ><i class="fa-regular fa-circle-right"></i>join
               mentorship</nuxt-link
@@ -49,6 +49,7 @@
         </div>
       </div>
     </div>
+    <Partners />
     <div class="events-div" id="events">
       <p>events coming soon. Stay tuned</p>
       <p>
@@ -56,62 +57,6 @@
         <a href="/#newsletter">Subscribe</a> to our newsletter to get notified
         whenever we have an event coming up..
       </p>
-    </div>
-    <div class="courses-array">
-      <div class="wrapper">
-        <div class="content">
-          <h1>course program</h1>
-          <p>see through our course programs</p>
-        </div>
-        <div class="flex-div">
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-
-            <span>2 videos</span>
-            <h4>introduction to forex trading</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-            <span>2 videos</span>
-            <h4>technical analysis</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-            <span>3 videos</span>
-            <h4>market structure</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-            <span>2 videos</span>
-            <h4>smart money concept</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-
-            <span>4 videos</span>
-            <h4>advanced smart money concept</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-
-            <span>1 videos</span>
-            <h4>psychology of trading</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-          <div class="course">
-            <i class="fa-solid fa-pen-clip"></i>
-
-            <span>7 videos</span>
-            <h4>real-life trading examples</h4>
-            <nuxt-link to="/courses">start course</nuxt-link>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -181,11 +126,13 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
+        margin-top: 20px;
 
         button {
-          width: 150px;
+          min-width: 150px;
           height: 47px;
           border: none;
+          padding: 4px 10px;
           border-radius: 10px;
           background: linear-gradient(
             to right,
@@ -410,6 +357,7 @@
 
           h2 {
             color: white;
+            color: rgb(37, 97, 89);
             text-transform: uppercase;
             padding: 10px;
             text-align: left;
@@ -441,106 +389,6 @@
           li {
             margin-bottom: 10px;
             text-align: left;
-          }
-        }
-      }
-    }
-  }
-
-  .courses-array {
-    width: 100%;
-    height: fit-content;
-    position: relative;
-
-    .wrapper {
-      width: 100%;
-      height: fit-content;
-      background: rgb(37, 97, 89);
-      padding: 20px 0;
-
-      .content {
-        width: 90%;
-        height: fit-content;
-
-        h1 {
-          text-align: center;
-          text-transform: uppercase;
-          color: white;
-        }
-
-        p {
-          color: white;
-          text-align: center;
-        }
-      }
-
-      .flex-div {
-        width: 90%;
-        height: fit-content;
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px 20px;
-        margin: 10px auto;
-
-        .course {
-          width: 230px;
-          height: 300px;
-          background: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          gap: 10px;
-          cursor: pointer;
-          padding: 20px 10px;
-
-          i {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            color: rgb(255, 255, 255);
-            font-size: 14px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgb(37, 97, 89);
-          }
-
-          span {
-            color: rgb(37, 97, 89);
-            font-size: 16px;
-            font-weight: 600;
-            color: rgb(222, 93, 24);
-          }
-
-          h4 {
-            text-transform: uppercase;
-          }
-          a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            height: 40px;
-            padding: 3px 20px;
-            color: rgb(9, 85, 71);
-            text-transform: uppercase;
-            text-decoration: none;
-
-            &:hover {
-              background: linear-gradient(
-                to right,
-                rgb(253, 147, 1),
-                rgb(255, 82, 22)
-              );
-              color: white;
-            }
-          }
-          &:hover {
-            transform: scale(0.9);
-            box-shadow: 0 3px 18px 1px rgba(32, 32, 32, 0.722);
           }
         }
       }

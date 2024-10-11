@@ -9,8 +9,8 @@
       </div>
       <h1>Book an appointment with me</h1>
       <p>
-        Get the opportunity to meet with one in person or get a one of one
-        online session with me.
+        Get the opportunity to meet with me in person or get a one on one online
+        session with me.
       </p>
       <div class="signin-form">
         <div class="form-wrapper">
@@ -82,13 +82,17 @@ const appointmentBody = reactive({
   email: "",
   tel: "",
   message: "",
+  type: "Appointment Booking.",
 });
 
 const appointmentFunc = (e) => {
   loader.value = true;
 
   axios
-    .post("https://affiliatepro-api.onrender.com/api/appointment", appointmentBody)
+    .post(
+      "https://affiliatepro-api.onrender.com/api/appointment",
+      appointmentBody
+    )
     .then((res) => {
       loader.value = false;
       setTimeout(() => {
@@ -104,8 +108,9 @@ const appointmentFunc = (e) => {
               appointmentBody.name = "";
               appointmentBody.email = "";
               appointmentBody.tel = "";
-              appointmentBody.date = "";
-              appointmentBody.time = "";
+              appointmentBody.message = "";
+              // appointmentBody.date = "";
+              // appointmentBody.time = "";
             },
           }
         );

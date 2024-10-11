@@ -2,18 +2,15 @@
   <div class="courses-container" id="courses">
     <div class="courses-wrapper">
       <h2 data-aos="zoom-in">
-        Find Your perfect <span>Forex Trading</span> course(s)
+        course <span>outline</span>.
+        <p class="text-sm center">what you will learn!</p>
         <hr data-aos="fade-up" />
       </h2>
 
       <div class="course-list">
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
-            <div class="image-content">
-              <span>2 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
-            </div>
+            <div class="image-content"></div>
           </div>
 
           <h3>introduction to trading</h3>
@@ -24,10 +21,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>2 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>2 videos </span> -->
             </div>
           </div>
 
@@ -39,10 +34,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>3 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>3 videos </span> -->
             </div>
           </div>
 
@@ -57,10 +50,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>2 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>2 videos </span> -->
             </div>
           </div>
 
@@ -72,10 +63,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>4 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>4 videos </span> -->
             </div>
           </div>
 
@@ -89,10 +78,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>1 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>1 videos </span> -->
             </div>
           </div>
 
@@ -104,10 +91,8 @@
         </div>
         <div class="course" data-aos="fade-up">
           <div class="course-img">
-            <img src="~/assets/achievement-pana.png" alt="" />
             <div class="image-content">
-              <span>7 videos </span>
-              <nuxt-link to="/academy">start course</nuxt-link>
+              <!-- <span>7 videos </span> -->
             </div>
           </div>
 
@@ -131,7 +116,7 @@
   height: fit-content;
 
   .courses-wrapper {
-    width: 90%;
+    width: 100%;
     height: fit-content;
     margin: 20px auto;
     padding: 30px 0 0 20px;
@@ -141,11 +126,16 @@
       padding: 10px;
       text-transform: uppercase;
       font-family: Montserrat, sans-serif;
-      font-size: 23px;
+      font-size: 30px;
 
       span {
         color: rgb(230, 89, 7);
       }
+    }
+
+    hr {
+      width: 7%;
+      margin: 10px auto;
     }
 
     p {
@@ -159,97 +149,32 @@
       height: fit-content;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
       gap: 20px;
       margin: 20px auto;
 
       .course {
-        width: 300px;
-        height: 360px;
+        width: 330px;
+        height: 200px;
         box-shadow: 0 3px 17px 2px rgb(228, 228, 228);
         background: white;
         overflow: hidden;
-        padding: 0;
+        padding: 20px;
+        border-radius: 10px;
 
-        .course-img {
-          width: 100%;
-          height: 200px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          margin: 0 auto;
-          position: relative;
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-          }
-
-          .image-content {
-            width: 100%;
-            height: 50px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-direction: row;
-            // background: rgb(42, 81, 76);
-
-            span {
-              background: linear-gradient(
-                to right,
-                rgb(42, 81, 76) 20%,
-                rgba(42, 81, 76, 0) 65%
-              );
-
-              color: white;
-              display: block;
-              width: 100%;
-              padding: 10px;
-              text-transform: capitalize;
-              text-align: left;
-            }
-
-            a {
-              text-decoration: none;
-              color: white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 100px;
-              height: 40px;
-              font-size: 11px;
-              border-radius: 5px;
-              text-transform: uppercase;
-              position: absolute;
-              bottom: 10px;
-              right: 10px;
-              background: linear-gradient(
-                to right,
-                rgb(253, 147, 1),
-                rgb(255, 82, 22)
-              );
-            }
-          }
-        }
         h3 {
-          text-align: left;
           text-transform: uppercase;
-          padding: 0 20px;
+          padding: 20px;
           margin-bottom: 0;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 550;
           line-height: 1.4em;
           color: rgb(228, 79, 30);
         }
         p {
-          text-align: left;
-          padding: 0 10px 0 20px;
-          font-size: 13px;
+          padding: 10px;
+          font-size: 12px;
         }
 
         .follow {

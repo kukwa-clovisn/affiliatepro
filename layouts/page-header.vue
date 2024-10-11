@@ -9,13 +9,13 @@
       <div class="header-items">
         <div class="header-items-list">
           <nuxtLink to="/">Home</nuxtLink>
-          <a href="/#about-us">about us</a>
+          <a href="/academy">academy</a>
           <a href="/#courses">Courses</a>
           <nuxtLink to="/#contact">Contacts</nuxtLink>
         </div>
       </div>
       <div class="header-contact">
-        <button>
+        <button class="bg-teal-600 rounded-3xl hover:bg-teal-500">
           <nuxt-link to="/appointment">appointment</nuxt-link>
         </button>
       </div>
@@ -44,7 +44,7 @@ const toggleMenu = useMenuState();
   height: fit-content;
   display: flex;
   justify-content: center;
-  background: rgb(37, 97, 89);
+  background: rgb(19, 184, 167);
   background: rgb(234, 246, 236);
   background: transparent;
   position: fixed;
@@ -75,17 +75,16 @@ const toggleMenu = useMenuState();
         align-items: center;
         position: relative;
         cursor: pointer;
-
+        color: rgb(19, 184, 167);
+        font-weight: 700;
+        font-size: 25px;
+        text-transform: capitalize;
+        font-family: "Grand Hotel", cursive;
         img {
           display: block;
           height: 80%;
           width: auto;
         }
-        color: rgb(35, 110, 100);
-        font-weight: 700;
-        font-size: 25px;
-        text-transform: capitalize;
-        font-family: "Grand Hotel", cursive;
 
         span {
           color: rgb(255, 136, 0);
@@ -135,8 +134,7 @@ const toggleMenu = useMenuState();
           justify-content: center;
           align-items: center;
           text-decoration: none;
-          color: rgb(43, 42, 42);
-          color: rgb(28, 79, 72);
+          color: rgb(9, 115, 105);
           text-transform: uppercase;
           font-family: Montserrat, sans-serif;
           font-weight: bold;
@@ -161,13 +159,13 @@ const toggleMenu = useMenuState();
 
       button {
         outline: none;
-        background: rgb(255, 255, 255);
-        background: rgb(37, 97, 89);
+
         width: max-content;
 
         height: 40px;
         border: none;
         border-radius: 30px;
+        overflow: hidden;
 
         a {
           padding: 0 20px;
@@ -176,6 +174,7 @@ const toggleMenu = useMenuState();
           align-items: center;
           width: 100%;
           height: 100%;
+          background: rgb(19, 184, 167);
           color: rgb(255, 255, 255);
           text-decoration: none;
           text-transform: uppercase;

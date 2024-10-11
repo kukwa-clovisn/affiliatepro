@@ -18,6 +18,7 @@
 .statistics {
   width: 100%;
   height: fit-content;
+  padding-top: 15vh;
 
   .wrapper {
     width: 80%;

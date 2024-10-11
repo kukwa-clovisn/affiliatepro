@@ -47,9 +47,7 @@
 footer {
   width: 100vw;
   height: fit-content;
-  background: rgb(17, 27, 26);
-  background: rgb(37, 97, 89);
-
+  background: rgb(4, 148, 134);
   .wrapper {
     width: 95%;
     height: fit-content;

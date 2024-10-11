@@ -3,96 +3,204 @@
     <div class="landing-page">
       <div class="blur-wrapper"></div>
       <div class="landing-page-wrapper">
-        <div class="image-content">
-          <div class="img">
-            <img src="~/assets/gospel.png" alt="" />
-          </div>
-        </div>
         <div class="page-content">
-          <h1>Hi i'm <span>Gospel Yong. </span></h1>
-          <div class="sm-image-content">
-            <img src="~/assets/gospel.png" alt="" />
+          <div class="logo-div">
+            <img
+              src="~/assets/jugosfx.png"
+              alt="JUGOSFX"
+              class="w-sm h-fit object-contain"
+            />
           </div>
-          <div class="listings">
-            <!-- <h2>i'm a</h2>   -->
-            <div class="list-div">
-              <ul>
-                <li>forex trader.</li>
-                <li>civil engineer.</li>
-                <li>youtuber.</li>
-              </ul>
+          <h1 class="text-teal-600 font-extrabold hover:text-teal-500">
+            gospelfxtrader
+          </h1>
+          <hr />
+          <div class="sm-image-content">
+            <img src="~/assets/g.png" alt="" />
+          </div>
+          <p class="text-left text-sm py-5">
+            I am YONG GOSPEL YUH, the CEO/cofounder of
+            <span class="text-teal-600 font-bold"> JUGOSFX TRADING ACADEMY</span
+            >, a forex mentor, civil engineer and a lot more.
+          </p>
+          <p class="text-left text-sm py-5">
+            Welcome to my space. I offer trainings in forex trading both online
+            and onsite. Check out my blog and join my mentorship program to
+            learn more.
+          </p>
+          <div class="page-buttons">
+            <div class="relative inline-flex group">
+              <div
+                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-teal-300 via-teal-500 to-teal-900 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+              ></div>
+              <nuxt-link
+                to="/signin"
+                title="Join My Personal Mentorship"
+                class="relative inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white transition-all duration-200 bg-teal-700 font-pj rounded-xl focus:outline-none focus:ring-1 transition hover:bg-teal-400 focus:ring-offset-2 hover:duration-700 focus:ring-teal-200 uppercase animate-bounce"
+                role="button"
+              >
+                <span class="relative flex hover:flex h-3 w-3 mr-3">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-3 w-3 bg-white"
+                  ></span>
+                </span>
+                join mentorship
+              </nuxt-link>
+            </div>
+            <div class="relative inline-flex group">
+              <nuxt-link
+                to="/academy"
+                title="Join My Forex Academy"
+                class="relative inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white transition-all duration-700 bg-orange-500 border-0 border-teal-600 font-pj rounded-xl hover:bg-teal-400 hover:text-white hover:border-0 focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-teal-200 uppercase animate-bounce"
+                role="button"
+                >academy
+              </nuxt-link>
+            </div>
+            <div class="relative inline-flex group">
+              <div
+                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-teal-300 via-teal-500 to-teal-900 rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+              ></div>
+              <nuxt-link
+                to="/blog"
+                title="Get Chart Updates Daily"
+                class="relative inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white transition-all duration-700 bg-teal-600 font-pj rounded-xl focus:outline-none focus:ring-2 hover:bg-teal-400 focus:ring-offset-2 focus:ring-teal-200 uppercase animate-bounce"
+                role="button"
+              >
+                <i class="fa-solid fa-book text-white mr-1"></i> visit blog
+              </nuxt-link>
             </div>
           </div>
-          <p>Welcome to my space</p>
-          <div class="page-buttons">
-            <button>
-              <nuxt-link to="/signup"
-                ><i class="fa-regular fa-circle-right"></i>join
-                mentorship</nuxt-link
-              ></button
-            ><button>
-              <nuxt-link to="/courses"
-                ><i class="fa-regular fa-circle-right"></i>free
-                courses</nuxt-link
-              >
-            </button>
+        </div>
+        <div class="image-content">
+          <div class="img">
+            <img src="~/assets/g.png" alt="" />
           </div>
         </div>
       </div>
     </div>
-
+    <Charts />
     <MainStatistics />
     <MainCourseDesign />
-    <div class="about-container" id="about-us">
-      <div class="about-wrapper">
-        <div class="image-content">
-          <img src="~/assets/gospel.png" alt="" />
-        </div>
-        <div class="blur-wrapper"></div>
-        <div class="about-us">
-          <h1>about <span>me</span></h1>
-          <p>
-            I'm a professional forex trader with 6years of experience and also a
-            funded trader with multiple prop firms.
-          </p>
-          <p>
-            I'm a mentor and CEO of jugosfx academy I mentor and follow up my
-            mentees till there are profitable Benefits Offering a 1 on 1
-            mentorship to help slow learners pick up I trained from novis to pro
-            traders helping traders with most of their trading challenges
-            psychologically and technically
-          </p>
-          <nuxt-link to="/courses" data-aos="zoom-in"
-            >check out my free courses</nuxt-link
-          >
-        </div>
-      </div>
-    </div>
+
     <MainCourses />
 
-    <mainEvents />
-    <div class="book">
-      <div class="wrapper">
-        <div class="book-description">
-          <p>Have you heard of.....</p>
-          <h1>the missing piece??</h1>
-          <p>
-            This is a book every forex trader and someone who aspires to be a
-            forex trader should read. it is a must read. There is a lot of
-            wisdom bundled with experiement at your disporsal for free. reach
-            out today and grab your free copy before the offers ends.
-          </p>
-          <a href="https://selar.co/9994hu">grab a free copy now</a>
+    <section class="text-gray-600 body-font book-section">
+      <h1
+        class="px-6 py-6 body-font text-teal-700 uppercase text-6xl font-extrabold"
+      >
+        the missing piece.
+      </h1>
+      <p class="text-center m-auto text-teal-700 uppercase">
+        Story of my forex journey!
+      </p>
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div
+          class="lg:w-1/3 lg:mr-0 w-1/2 m-auto h-fit mb-10 lg:mb-0 rounded-lg overflow-hidden"
+        >
+          <img
+            alt="feature"
+            class="object-cover object-center h-full w-full"
+            src="../assets/book.jpg"
+          />
         </div>
-
-        <div class="image"><img src="../assets/book.jpg" alt="" /></div>
+        <div
+          class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center"
+        >
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-teal-100 text-indigo-500 mb-5"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-bold mb-3">
+                Shooting Stars
+              </h2>
+              <p class="leading-relaxed text-base">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine.
+              </p>
+              <a
+                class="mt-3 text-gray-700 inline-flex items-center bg-transparent border border-gray-400 rounded px-5 py-1 uppercase hover:bg-teal-200 hover:border-0 hover:border-transparent"
+                href="https://selar.co/9994hu"
+                >order
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col mb-10 lg:items-start items-center">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-teal-100 text-indigo-500 mb-5"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-lg title-font font-bold mb-3">
+                Shooting Stars
+              </h2>
+              <p class="leading-relaxed text-base">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine.
+              </p>
+              <a
+                class="mt-3 text-gray-700 inline-flex items-center bg-transparent border border-gray-400 rounded px-5 py-1 uppercase hover:bg-teal-200 hover:border-0 hover:border-transparent"
+                href="https://selar.co/9994hu"
+                >order
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- <mainTestimonials /> -->
+    </section>
+    <testimonials />
     <div class="subscriber-container" id="newsletter">
       <div class="subscriber-wrapper">
         <h1 data-aos="fade-up">
-          want to get special offers, promos and course updates from us???
+          Want to get special offers, promos and course updates from us???
         </h1>
 
         <div class="subscriber-rorm">
@@ -106,7 +214,9 @@
         </div>
       </div>
     </div>
+    <Partners />
     <MainContact />
+    <ContactForm />
   </div>
 </template>
 
@@ -155,12 +265,10 @@ const subscribeFunc = (email) => {
 };
 </script>
 
-
-
 <style lang="scss">
 hr {
   display: block;
-  width: 40%;
+  width: 90%;
   height: 3px;
   background: rgb(230, 89, 7);
   border-radius: 30px;
@@ -176,58 +284,112 @@ hr {
     width: 100%;
     height: fit-content;
     background: rgb(234, 246, 236);
+
     position: relative;
 
     .blur-wrapper {
-      display: none;
+      background: rgb(19, 184, 167);
+      box-shadow: -15px -50px 190px 1px rgb(19, 184, 167);
+      width: 45%;
+      height: 100%;
+      position: absolute;
+      left: 55%;
+      top: 0;
+      opacity: 1;
+      border-radius: 250% 0 0 0;
     }
 
     .landing-page-wrapper {
-      width: 80%;
-      height: 89vh;
+      width: 85%;
+      height: 100vh;
       margin: 0 auto;
-      padding-top: 18vh;
+      padding-top: 15vh;
       position: relative;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       position: relative;
-      .image-content {
-        width: 50%;
-        height: fit-content;
 
+      .image-content {
+        width: 40%;
+        height: 80vh;
+        display: flex;
+        align-items: flex-end;
         .img {
-          width: 75%;
+          width: 90%;
           height: 400px;
-          border-radius: 35% 0 35% 0;
-          background: rgb(37, 97, 89);
-          overflow: hidden;
+          border-radius: 100%;
+          background: rgb(234, 246, 236);
+
           display: flex;
           justify-content: center;
-          align-items: center;
+          position: relative;
+          align-items: flex-end;
 
           img {
-            height: 100%;
+            height: 120%;
             width: auto;
+            position: relative;
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              to right,
+              rgb(231, 136, 34) 30%,
+              rgb(19, 184, 167) 70%
+            );
+            position: absolute;
+            left: 20%;
+            bottom: 0%;
+            border-radius: 100%;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
           }
         }
       }
 
       .page-content {
-        width: 50%;
+        width: 55%;
         height: fit-content;
+
+        .logo-div {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+
+          img {
+            height: 10vh;
+            width: auto;
+            // object-fit: contain;
+          }
+        }
+        hr {
+          background: rgb(19, 184, 167);
+          height: 1px;
+        }
 
         h1 {
           font-size: 40px;
-          line-height: 50px;
-          color: rgb(37, 97, 89);
+          line-height: 150px;
           text-align: left;
-          font-weight: 600;
+          text-transform: uppercase;
+          font-weight: 400;
+          padding: 0;
+          margin: 0;
+          // font-family: "Poppins";
+          background: linear-gradient(to right, teal, rgb(255, 136, 0));
+          background-clip: text;
+          color: transparent;
 
-          span {
-            color: rgb(255, 82, 22);
+          &::first-letter {
+            font-size: 200px;
 
-            text-transform: uppercase;
+            font-family: serif;
+            font-weight: 900;
           }
 
           @media screen and (max-width: 600px) {
@@ -237,11 +399,6 @@ hr {
             flex-direction: column;
             gap: 20px;
             font-size: 30px;
-
-            span {
-              display: block;
-              font-size: 30px;
-            }
           }
         }
 
@@ -264,138 +421,6 @@ hr {
           }
         }
 
-        .listings {
-          position: relative;
-          width: 80%;
-          height: 105px;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .list-div {
-            position: relative;
-            height: 100px;
-            width: 98%;
-            overflow: hidden;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 14px;
-
-            ul {
-              width: 100%;
-              list-style-type: none;
-              background: rgb(234, 246, 236);
-              z-index: 1;
-              animation: skip 9s steps(3) infinite;
-              position: absolute;
-              top: 0;
-              left: 0;
-              margin: auto;
-              display: flex;
-              justify-content: center;
-              align-items: flex-start;
-              flex-direction: column;
-              padding: 0;
-
-              li {
-                text-transform: uppercase;
-                font-size: 23px;
-                height: 100px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-                margin: 0;
-                color: rgb(37, 97, 89);
-                font-weight: 800;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                animation: explode 1.5s linear infinite alternate forwards;
-
-                @media screen and (max-width: 400px) {
-                  font-size: 18px;
-                }
-              }
-
-              @keyframes explode {
-                from {
-                  opacity: 1;
-                  transform: scale(0);
-                }
-                to {
-                  opacity: 1;
-                  transform: scale(2);
-                }
-              }
-            }
-
-            @media screen and (max-width: 250px) {
-              width: 100%;
-            }
-          }
-          &::before {
-            content: "";
-            width: 200%;
-            height: 90%;
-            position: absolute;
-            top: 20%;
-            left: -50%;
-            background: linear-gradient(rgb(14, 109, 74), rgb(14, 145, 112));
-            animation: rotate 2.5s linear infinite;
-          }
-          &::after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: linear-gradient(
-              to right,
-              rgb(253, 147, 1),
-              rgb(255, 82, 22)
-            );
-            animation: reverserotate 2s linear infinite;
-          }
-
-          @media screen and (max-width: 400px) {
-            gap: 10px;
-            justify-content: space-evenly;
-          }
-        }
-
-        @keyframes rotate {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(-360deg);
-          }
-        }
-        @keyframes reverserotate {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-        @keyframes skip {
-          from {
-            top: 0;
-          }
-          to {
-            top: -300px;
-          }
-        }
-        p {
-          text-align: left;
-          color: rgb(37, 97, 89);
-        }
-
         .page-buttons {
           width: 100%;
           height: fit-content;
@@ -403,41 +428,7 @@ hr {
           justify-content: flex-start;
           align-items: flex-start;
           gap: 20px;
-
-          button {
-            width: 150px;
-            height: 47px;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(
-              to right,
-              rgb(253, 147, 1),
-              rgb(255, 82, 22)
-            );
-            color: white;
-            text-transform: capitalize;
-            font-weight: 600;
-
-            i {
-              padding-right: 6px;
-              color: white;
-            }
-
-            a {
-              text-decoration: none;
-              color: white;
-              text-transform: capitalize;
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-
-            &:last-child {
-              background: rgb(37, 97, 89);
-            }
-          }
+          margin: 20px auto;
         }
 
         @media screen and (max-width: 1000px) {
@@ -585,177 +576,10 @@ hr {
     }
   }
 
-  .about-container {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: flex-end;
-    padding: 30px 0;
-
-    .about-wrapper {
-      width: 80%;
-      height: 400px;
-      background: rgb(37, 97, 89);
-      background: linear-gradient(
-        to bottom,
-        rgb(37, 97, 89),
-        rgb(50, 168, 152)
-      );
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      border-radius: 15px;
-      position: relative;
-      box-shadow: -3px -3px 8px 1px rgba(1, 49, 34, 0.53);
-
-      .image-content {
-        width: 35%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-
-        img {
-          width: auto;
-          height: 440px;
-          cursor: pointer;
-
-          object-fit: contain;
-        }
-      }
-
-      .blur-wrapper {
-        display: none;
-        opacity: 0.4;
-
-        @media screen and (max-width: 768px) {
-          display: block;
-        }
-      }
-
-      .about-us {
-        width: 65%;
-        height: fit-content;
-        padding: 10px;
-        padding-right: 20px;
-        position: relative;
-        h1 {
-          text-align: left;
-          text-transform: uppercase;
-          width: max-content;
-          color: white;
-
-          span {
-            color: rgb(231, 136, 34);
-          }
-
-          &::before {
-            content: "";
-            display: block;
-            width: 65%;
-            height: 3px;
-            background: rgb(228, 138, 12);
-            margin-bottom: 5px;
-          }
-          &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: rgb(217, 94, 7);
-            margin-top: 5px;
-          }
-        }
-
-        p {
-          text-align: left;
-          color: rgb(232, 232, 232);
-          font-size: 16px;
-          line-height: 24px;
-        }
-        a {
-          width: fit-content;
-          padding: 2px 20px;
-          height: 47px;
-          border: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 10px;
-          text-decoration: none;
-          background: linear-gradient(
-            to right,
-            rgb(253, 147, 1),
-            rgb(255, 82, 22)
-          );
-          color: white;
-          text-transform: capitalize;
-          font-weight: 600;
-          margin: 0px;
-        }
-      }
-      @media screen and (max-width: 1000px) {
-        width: 90%;
-
-        @media screen and (max-width: 900px) {
-          width: 100%;
-          border-radius: 0;
-          height: fit-content;
-
-          .image-content {
-            width: 30%;
-          }
-
-          .about-us {
-            position: relative;
-            width: 70%;
-          }
-
-          @media screen and (max-width: 768px) {
-            padding: 20px 0;
-            .image-content {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              overflow: hidden;
-              img {
-                height: 100%;
-                width: auto;
-                position: relative;
-              }
-            }
-            .about-us {
-              width: 100%;
-
-              h1 {
-                width: 100%;
-
-                &::before,
-                &::after {
-                  display: none;
-                }
-              }
-              h1,
-              p {
-                text-align: center;
-              }
-              button {
-                margin: 20px auto;
-                width: 200px;
-                display: block;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
   .subscriber-container {
     width: 100%;
     height: fit-content;
-    background: rgb(37, 97, 89);
+    background: rgb(19, 184, 167);
 
     .subscriber-wrapper {
       width: 100%;
@@ -784,7 +608,7 @@ hr {
         margin: 20px auto;
         background: rgb(255, 255, 255);
         border-radius: 30px;
-        box-shadow: 0 0 1px 1px rgb(127, 127, 127);
+        // box-shadow: 0 0 1px 1px rgb(127, 127, 127);
         input {
           width: 70%;
           height: 100%;
@@ -801,7 +625,7 @@ hr {
           border: none;
           width: 30%;
           height: 100%;
-          background: rgb(37, 97, 89);
+          background: rgb(19, 184, 167);
           color: white;
           font-weight: bold;
           text-transform: capitalize;
@@ -916,6 +740,11 @@ hr {
         }
       }
     }
+  }
+
+  .book-section {
+    width: 90vw;
+    margin: auto;
   }
 }
 </style>

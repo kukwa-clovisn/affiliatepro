@@ -1,7 +1,9 @@
 <template>
   <div class="fpassword-container">
     <div class="fpassword-wrapper">
-      <h1>Forgot your password??</h1>
+      <h1 class="font-bold text-teal-600 text-2xl uppercase">
+        Forgot your password??
+      </h1>
       <p>Let us help you recover your account...</p>
       <div class="fpassword-img">
         <img src="~/assets/forgot_password.png" alt="" />
