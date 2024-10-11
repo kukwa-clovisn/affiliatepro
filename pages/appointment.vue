@@ -2,10 +2,10 @@
   <div class="signin-container">
     <div class="signin-wrapper">
       <div class="signin-img">
-        <img src="~/assets/achievement-pana.png" alt="" />
+        <img src="~/assets/Achievement-pana.png" alt="" />
       </div>
       <div class="signin-img-right">
-        <img src="~/assets/achievement-pana.png" alt="" />
+        <img src="~/assets/Achievement-pana.png" alt="" />
       </div>
       <h1>Book an appointment with me</h1>
       <p>
