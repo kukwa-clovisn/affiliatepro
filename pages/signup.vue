@@ -1,7 +1,7 @@
 <template>
   <div class="signin-container">
     <div class="signin-wrapper">
-      <div class="signup-img"><img src="~/assets/sign-up.png" alt="" /></div>
+      <div class="signup-img"><img src="~/assets/Sign-up.png" alt="" /></div>
       <h1>
         signup to <span>gospelfx<span>trader</span></span> mentorship
       </h1>
